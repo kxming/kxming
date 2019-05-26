@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on KXMing</title>
-    <link>https://kxming.github.io/kxming/post/</link>
-    <description>Recent content in Posts on KXMing</description>
+    <title>blog on KXMing</title>
+    <link>https://kxming.github.io/kxming/categories/blog/</link>
+    <description>Recent content in blog on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 26 May 2019 17:44:53 +0800</lastBuildDate>
     
-	<atom:link href="https://kxming.github.io/kxming/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kxming.github.io/kxming/categories/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,18 +18,6 @@
       
       <guid>https://kxming.github.io/kxming/2019/05/hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/</guid>
       <description>&lt;p&gt;本博客使用&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt;静态页面生成引擎，使用的主题是&lt;a href=&#34;https://tranquilpeak.kakawait.com/&#34;&gt;tranquilpeak&lt;/a&gt;，使用的评论系统为&lt;a href=&#34;https://valine.js.org/&#34;&gt;Valine&lt;/a&gt;。写这篇文章的目的是详细介绍个人博客创建指南。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Component</title>
-      <link>https://kxming.github.io/kxming/2019/05/component/</link>
-      <pubDate>Sun, 26 May 2019 13:28:37 +0800</pubDate>
-      
-      <guid>https://kxming.github.io/kxming/2019/05/component/</guid>
-      <description>组件控制屏幕上被称为视图的一小片区域。比如，教程中的下列视图都是由一个个组件所定义和控制的：
-带有导航链接的应用根组件。
-英雄列表。
-英雄编辑器。</description>
     </item>
     
   </channel>
