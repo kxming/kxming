@@ -1,253 +1,254 @@
-<?xml-stylesheet type="text/xsl" href="https://kxming.github.io/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kxming.github.io/categories/</loc>
+    <loc>https://kxming.github.io/kxming/categories/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/</loc>
+    <loc>https://kxming.github.io/kxming/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/post/</loc>
+    <loc>https://kxming.github.io/kxming/post/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/</loc>
+    <loc>https://kxming.github.io/kxming/tags/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2015/06/welcome-to-tranquilpeak-0.4.4-beta/</loc>
+    <loc>https://kxming.github.io/kxming/2015/06/welcome-to-tranquilpeak-0.4.4-beta/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/disqus/</loc>
-    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/tags/google-analytics/</loc>
+    <loc>https://kxming.github.io/kxming/tags/disqus/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/gravatar/</loc>
+    <loc>https://kxming.github.io/kxming/tags/google-analytics/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/hexo-theme/</loc>
+    <loc>https://kxming.github.io/kxming/tags/gravatar/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/categories/releases/</loc>
+    <loc>https://kxming.github.io/kxming/tags/hexo-theme/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/responsive/</loc>
+    <loc>https://kxming.github.io/kxming/categories/releases/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/categories/tranquilpeak/</loc>
+    <loc>https://kxming.github.io/kxming/tags/responsive/</loc>
     <lastmod>2015-06-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2015/06/who-is-using-tranquilpeak-hugo-theme/</loc>
+    <loc>https://kxming.github.io/kxming/categories/tranquilpeak/</loc>
+    <lastmod>2015-06-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/2015/06/who-is-using-tranquilpeak-hugo-theme/</loc>
     <lastmod>2015-06-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/categories/showcase-appliqu%C3%A9e/</loc>
+    <loc>https://kxming.github.io/kxming/categories/showcase-appliqu%C3%A9e/</loc>
     <lastmod>2015-06-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2015/05/elements-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2015/05/elements-showcase/</loc>
     <lastmod>2015-05-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/categories/features/</loc>
-    <lastmod>2015-05-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/tags/html-elements/</loc>
+    <loc>https://kxming.github.io/kxming/categories/features/</loc>
     <lastmod>2015-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/markdown/</loc>
+    <loc>https://kxming.github.io/kxming/tags/html-elements/</loc>
     <lastmod>2015-05-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2015/05/cover-image-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/tags/markdown/</loc>
+    <lastmod>2015-05-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/2015/05/cover-image-showcase/</loc>
     <lastmod>2015-05-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/cover-image/</loc>
+    <loc>https://kxming.github.io/kxming/tags/cover-image/</loc>
     <lastmod>2015-05-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/github-theme/</loc>
+    <loc>https://kxming.github.io/kxming/tags/github-theme/</loc>
     <lastmod>2015-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/highlight-code/</loc>
+    <loc>https://kxming.github.io/kxming/tags/highlight-code/</loc>
     <lastmod>2015-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2015/03/highlighted-code-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2015/03/highlighted-code-showcase/</loc>
     <lastmod>2015-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/test/</loc>
+    <loc>https://kxming.github.io/kxming/tags/test/</loc>
     <lastmod>2015-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2014/10/tags-plugins-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2014/10/tags-plugins-showcase/</loc>
     <lastmod>2014-10-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/tag-plugins/</loc>
+    <loc>https://kxming.github.io/kxming/tags/tag-plugins/</loc>
     <lastmod>2014-10-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2014/08/hidden-social-section-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2014/08/hidden-social-section-showcase/</loc>
     <lastmod>2014-08-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/social/</loc>
+    <loc>https://kxming.github.io/kxming/tags/social/</loc>
     <lastmod>2014-08-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2014/08/hidden-tag-section-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2014/08/hidden-tag-section-showcase/</loc>
     <lastmod>2014-08-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/tags/</loc>
+    <loc>https://kxming.github.io/kxming/tags/tags/</loc>
     <lastmod>2014-08-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2014/08/hidden-pagination-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2014/08/hidden-pagination-showcase/</loc>
     <lastmod>2014-08-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/pagination/</loc>
+    <loc>https://kxming.github.io/kxming/tags/pagination/</loc>
     <lastmod>2014-08-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2014/08/video-integrations-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2014/08/video-integrations-showcase/</loc>
     <lastmod>2014-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/dailymotion/</loc>
-    <lastmod>2014-08-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/tags/videos-integration/</loc>
+    <loc>https://kxming.github.io/kxming/tags/dailymotion/</loc>
     <lastmod>2014-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/vimeo/</loc>
+    <loc>https://kxming.github.io/kxming/tags/videos-integration/</loc>
     <lastmod>2014-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/youtube/</loc>
+    <loc>https://kxming.github.io/kxming/tags/vimeo/</loc>
     <lastmod>2014-08-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/chinese/</loc>
+    <loc>https://kxming.github.io/kxming/tags/youtube/</loc>
+    <lastmod>2014-08-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/chinese/</loc>
     <lastmod>2013-10-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2013/10/chinese-test/</loc>
+    <loc>https://kxming.github.io/kxming/2013/10/chinese-test/</loc>
     <lastmod>2013-10-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2013/02/image-gallery-showcase/</loc>
+    <loc>https://kxming.github.io/kxming/2013/02/image-gallery-showcase/</loc>
     <lastmod>2013-02-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/image-gallery/</loc>
+    <loc>https://kxming.github.io/kxming/tags/image-gallery/</loc>
     <lastmod>2013-02-18T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/tags/japanese/</loc>
+    <loc>https://kxming.github.io/kxming/tags/japanese/</loc>
     <lastmod>2013-01-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/2013/01/japanese-test/</loc>
+    <loc>https://kxming.github.io/kxming/2013/01/japanese-test/</loc>
     <lastmod>2013-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/archives/</loc>
+    <loc>https://kxming.github.io/kxming/archives/</loc>
     <priority>0</priority>
   </url>
   

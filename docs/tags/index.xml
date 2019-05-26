@@ -2,210 +2,210 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on KXMing</title>
-    <link>https://kxming.github.io/tags/</link>
+    <link>https://kxming.github.io/kxming/tags/</link>
     <description>Recent content in Tags on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 15 Jun 2015 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://kxming.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kxming.github.io/kxming/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>disqus</title>
-      <link>https://kxming.github.io/tags/disqus/</link>
+      <link>https://kxming.github.io/kxming/tags/disqus/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/disqus/</guid>
+      <guid>https://kxming.github.io/kxming/tags/disqus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>google analytics</title>
-      <link>https://kxming.github.io/tags/google-analytics/</link>
+      <link>https://kxming.github.io/kxming/tags/google-analytics/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/google-analytics/</guid>
+      <guid>https://kxming.github.io/kxming/tags/google-analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gravatar</title>
-      <link>https://kxming.github.io/tags/gravatar/</link>
+      <link>https://kxming.github.io/kxming/tags/gravatar/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/gravatar/</guid>
+      <guid>https://kxming.github.io/kxming/tags/gravatar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hexo theme</title>
-      <link>https://kxming.github.io/tags/hexo-theme/</link>
+      <link>https://kxming.github.io/kxming/tags/hexo-theme/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/hexo-theme/</guid>
+      <guid>https://kxming.github.io/kxming/tags/hexo-theme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>responsive</title>
-      <link>https://kxming.github.io/tags/responsive/</link>
+      <link>https://kxming.github.io/kxming/tags/responsive/</link>
       <pubDate>Mon, 15 Jun 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/responsive/</guid>
+      <guid>https://kxming.github.io/kxming/tags/responsive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>html elements</title>
-      <link>https://kxming.github.io/tags/html-elements/</link>
+      <link>https://kxming.github.io/kxming/tags/html-elements/</link>
       <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/html-elements/</guid>
+      <guid>https://kxming.github.io/kxming/tags/html-elements/</guid>
       <description></description>
     </item>
     
     <item>
       <title>markdown</title>
-      <link>https://kxming.github.io/tags/markdown/</link>
+      <link>https://kxming.github.io/kxming/tags/markdown/</link>
       <pubDate>Thu, 28 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/markdown/</guid>
+      <guid>https://kxming.github.io/kxming/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cover image</title>
-      <link>https://kxming.github.io/tags/cover-image/</link>
+      <link>https://kxming.github.io/kxming/tags/cover-image/</link>
       <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/cover-image/</guid>
+      <guid>https://kxming.github.io/kxming/tags/cover-image/</guid>
       <description></description>
     </item>
     
     <item>
       <title>github theme</title>
-      <link>https://kxming.github.io/tags/github-theme/</link>
+      <link>https://kxming.github.io/kxming/tags/github-theme/</link>
       <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/github-theme/</guid>
+      <guid>https://kxming.github.io/kxming/tags/github-theme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>highlight code</title>
-      <link>https://kxming.github.io/tags/highlight-code/</link>
+      <link>https://kxming.github.io/kxming/tags/highlight-code/</link>
       <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/highlight-code/</guid>
+      <guid>https://kxming.github.io/kxming/tags/highlight-code/</guid>
       <description></description>
     </item>
     
     <item>
       <title>test</title>
-      <link>https://kxming.github.io/tags/test/</link>
+      <link>https://kxming.github.io/kxming/tags/test/</link>
       <pubDate>Mon, 23 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/test/</guid>
+      <guid>https://kxming.github.io/kxming/tags/test/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tag plugins</title>
-      <link>https://kxming.github.io/tags/tag-plugins/</link>
+      <link>https://kxming.github.io/kxming/tags/tag-plugins/</link>
       <pubDate>Wed, 29 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/tag-plugins/</guid>
+      <guid>https://kxming.github.io/kxming/tags/tag-plugins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>social</title>
-      <link>https://kxming.github.io/tags/social/</link>
+      <link>https://kxming.github.io/kxming/tags/social/</link>
       <pubDate>Sun, 17 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/social/</guid>
+      <guid>https://kxming.github.io/kxming/tags/social/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tags</title>
-      <link>https://kxming.github.io/tags/tags/</link>
+      <link>https://kxming.github.io/kxming/tags/tags/</link>
       <pubDate>Sat, 16 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/tags/</guid>
+      <guid>https://kxming.github.io/kxming/tags/tags/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pagination</title>
-      <link>https://kxming.github.io/tags/pagination/</link>
+      <link>https://kxming.github.io/kxming/tags/pagination/</link>
       <pubDate>Fri, 15 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/pagination/</guid>
+      <guid>https://kxming.github.io/kxming/tags/pagination/</guid>
       <description></description>
     </item>
     
     <item>
       <title>dailymotion</title>
-      <link>https://kxming.github.io/tags/dailymotion/</link>
+      <link>https://kxming.github.io/kxming/tags/dailymotion/</link>
       <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/dailymotion/</guid>
+      <guid>https://kxming.github.io/kxming/tags/dailymotion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>videos integration</title>
-      <link>https://kxming.github.io/tags/videos-integration/</link>
+      <link>https://kxming.github.io/kxming/tags/videos-integration/</link>
       <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/videos-integration/</guid>
+      <guid>https://kxming.github.io/kxming/tags/videos-integration/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vimeo</title>
-      <link>https://kxming.github.io/tags/vimeo/</link>
+      <link>https://kxming.github.io/kxming/tags/vimeo/</link>
       <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/vimeo/</guid>
+      <guid>https://kxming.github.io/kxming/tags/vimeo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>youtube</title>
-      <link>https://kxming.github.io/tags/youtube/</link>
+      <link>https://kxming.github.io/kxming/tags/youtube/</link>
       <pubDate>Sat, 09 Aug 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/youtube/</guid>
+      <guid>https://kxming.github.io/kxming/tags/youtube/</guid>
       <description></description>
     </item>
     
     <item>
       <title>chinese</title>
-      <link>https://kxming.github.io/tags/chinese/</link>
+      <link>https://kxming.github.io/kxming/tags/chinese/</link>
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/chinese/</guid>
+      <guid>https://kxming.github.io/kxming/tags/chinese/</guid>
       <description></description>
     </item>
     
     <item>
       <title>image gallery</title>
-      <link>https://kxming.github.io/tags/image-gallery/</link>
+      <link>https://kxming.github.io/kxming/tags/image-gallery/</link>
       <pubDate>Mon, 18 Feb 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/image-gallery/</guid>
+      <guid>https://kxming.github.io/kxming/tags/image-gallery/</guid>
       <description></description>
     </item>
     
     <item>
       <title>japanese</title>
-      <link>https://kxming.github.io/tags/japanese/</link>
+      <link>https://kxming.github.io/kxming/tags/japanese/</link>
       <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://kxming.github.io/tags/japanese/</guid>
+      <guid>https://kxming.github.io/kxming/tags/japanese/</guid>
       <description></description>
     </item>
     

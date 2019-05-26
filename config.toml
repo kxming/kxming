@@ -12,7 +12,7 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "https://kxming.github.io/"
+baseURL = "https://kxming.github.io/kxming/"
 languageCode = "en-us"
 defaultContentLanguage = "zh-cn"
 title = "KXMing"
@@ -133,7 +133,7 @@ publishDir = "docs"
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  description = "kxming blog"
+  # description = "kxming blog"
 
   # Customization
   # Define the behavior of the sidebar
@@ -174,7 +174,7 @@ publishDir = "docs"
 
   # Your favicon path, default is "/favicon.png"
   # favicon = "/favicon.png"
-  favicon = "/favicon.png"
+  favicon = "/favicon.ico"
 
   # Header configuration
   # The link at the right of the header is customizable
@@ -202,25 +202,25 @@ publishDir = "docs"
   # Comment and uncomment to enable or disable sharing options
   # If you wanna add a sharing option, read user documentation :
   # Tranquilpeak configuration > Theme configuration > sharing-options
-  [[params.sharingOptions]]
-    name = "Facebook"
-    icon = "fa-facebook-official"
-    url = "https://www.facebook.com/sharer/sharer.php?u=%s"
+  # [[params.sharingOptions]]
+  #   name = "Facebook"
+  #   icon = "fa-facebook-official"
+  #   url = "https://www.facebook.com/sharer/sharer.php?u=%s"
 
-  [[params.sharingOptions]]
-    name = "Twitter"
-    icon = "fa-twitter"
-    url = "https://twitter.com/intent/tweet?text=%s"
+  # [[params.sharingOptions]]
+  #   name = "Twitter"
+  #   icon = "fa-twitter"
+  #   url = "https://twitter.com/intent/tweet?text=%s"
 
-  [[params.sharingOptions]]
-    name = "Google+"
-    icon = "fa-google-plus"
-    url = "https://plus.google.com/share?url=%s"
+  # [[params.sharingOptions]]
+  #   name = "Google+"
+  #   icon = "fa-google-plus"
+  #   url = "https://plus.google.com/share?url=%s"
 
-  [params.header.rightLink]
-    class = ""
-    icon = ""
-    url = "/#about"
+  # [params.header.rightLink]
+  #   class = ""
+  #   icon = ""
+  #   url = "/#about"
 
   # Customize link of author avatar in sidebar
   # [params.sidebar.profile]
