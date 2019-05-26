@@ -116,11 +116,11 @@ publishDir = "docs"
   # You must use date format used by Go Time package https://golang.org/pkg/time/
   # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
   # Default format is: January 2, 2006
-  # dateFormat = "2 January 2006"
+  dateFormat = "2006年1月2日"
 
   # Global keywords configuration. Following keywords will be add to every pages
   # keywords = ["development", "next-gen"]
-  keywords = ["js", "es6", "angular", "vue"]
+  keywords = ["js", "es6", "angular", "vue", "typescript", "rxjs"]
 
   # Syntax highlighter, possible choice between: "highlight.js" (recommanded) and "prism.js" (experimental)
   # You can comment it to disable syntax highlighting
@@ -217,10 +217,10 @@ publishDir = "docs"
   #   icon = "fa-google-plus"
   #   url = "https://plus.google.com/share?url=%s"
 
-  # [params.header.rightLink]
-  #   class = ""
-  #   icon = ""
-  #   url = "/#about"
+  [params.header.rightLink]
+    class = ""
+    icon = ""
+    url = "/#about"
 
   # Customize link of author avatar in sidebar
   # [params.sidebar.profile]
