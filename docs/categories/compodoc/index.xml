@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compodoc on KXMing</title>
+    <link>https://kxming.github.io/kxming/categories/compodoc/</link>
+    <description>Recent content in compodoc on KXMing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 26 May 2019 23:23:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://kxming.github.io/kxming/categories/compodoc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Compodoc</title>
+      <link>https://kxming.github.io/kxming/2019/05/compodoc/</link>
+      <pubDate>Sun, 26 May 2019 23:23:53 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/05/compodoc/</guid>
+      <description>&lt;p&gt;Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

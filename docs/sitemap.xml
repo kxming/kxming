@@ -4,7 +4,60 @@
   
   <url>
     <loc>https://kxming.github.io/kxming/categories/</loc>
-    <lastmod>2019-05-26T17:44:53+08:00</lastmod>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/2019/05/compodoc/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/post/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/angular/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/angular/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/compodoc/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/tool/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/tool/</loc>
+    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,24 +73,6 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/</loc>
-    <lastmod>2019-05-26T17:44:53+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/post/</loc>
-    <lastmod>2019-05-26T17:44:53+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/tags/</loc>
-    <lastmod>2019-05-26T17:44:53+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kxming.github.io/kxming/categories/blog/</loc>
     <lastmod>2019-05-26T17:44:53+08:00</lastmod>
     <priority>0</priority>
@@ -46,12 +81,6 @@
   <url>
     <loc>https://kxming.github.io/kxming/tags/blog/</loc>
     <lastmod>2019-05-26T17:44:53+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/categories/angular/</loc>
-    <lastmod>2019-05-26T13:28:37+08:00</lastmod>
     <priority>0</priority>
   </url>
   

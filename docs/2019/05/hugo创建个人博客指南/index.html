@@ -404,7 +404,15 @@ tags:
 - 标签
 keywords:
 - 关键字
-</code></pre></li>
+
+more标签上方的内容会在列表页显示内容简介
+&lt;!--more--&gt;
+toc标签会生成本篇文章的目录
+&lt;!-- toc --&gt;
+</code></pre>
+
+<p><code>hugo serve</code>
+在浏览器localhost:1313端口访问本地服务</p></li>
 
 <li><p>安装Valine评论系统</p>
 
@@ -454,7 +462,7 @@ keywords:
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://kxming.github.io/kxming/2019/05/compodoc/" data-tooltip="Compodoc">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -570,7 +578,7 @@ keywords:
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://kxming.github.io/kxming/2019/05/compodoc/" data-tooltip="Compodoc">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -675,6 +683,23 @@ keywords:
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/compodoc/">
+                <h3 class="media-heading">Compodoc</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">
                 <h3 class="media-heading">Hugo创建个人博客指南</h3>
               </a>
@@ -716,7 +741,7 @@ keywords:
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         2 posts found
+         3 posts found
       </p>
     </div>
   </div>
