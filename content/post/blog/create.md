@@ -150,7 +150,14 @@ keywords:
     - 标签
     keywords:
     - 关键字
+
+    more标签上方的内容会在列表页显示内容简介
+    <!--more-->
+    toc标签会生成本篇文章的目录
+    <!-- toc -->
     ```
+    `hugo serve`
+    在浏览器localhost:1313端口访问本地服务
 5. 安装Valine评论系统
 
     > Valine - 一款快速、简洁且高效的无后端评论系统。
