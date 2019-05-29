@@ -13,6 +13,7 @@ keywords:
 ---
 Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。
 <!--more-->
+<!-- toc -->
 
 ### 示例
 

@@ -174,3 +174,27 @@ keywords:
     在码云创建新项目，上传本项目代码或者导入GitHub本项目，打开服务/Gitee Pages，部署目录填写docs，等待部署，成功后可在https://your_name.gitee.io 查看创建的博客。
 
 > 本博客内容为简单配置，更多博客主题、评论配置可在各自官网查看。
+
+
+
+Q & A
+
+1. 引入图片有两种方式
+
+   * 图片地址设置为config.toml中的baseUrl+static文件夹下的文件，如：
+
+     图片路径为static/vue/test.png
+
+     地址为https://your_name.github.io/your_name/vue/test.png.
+   
+   * 图床
+   
+     以GitHub图床为例。
+   
+     * 在github上新建repository如picbed
+     * git clone
+     * 将需要上传的图片放到本地目录picbed下
+     * git commit    git push
+     * 图片链接格式为：`https://raw.githubusercontent.com/<github号>/<repository名字>/master/<图片名>`，比如：https://raw.githubusercontent.com/841809077/blog-img/master/win-github.jpg
+   
+     或者可以使用[PicGo](https://picgo.github.io/PicGo-Doc/zh/guide/)
