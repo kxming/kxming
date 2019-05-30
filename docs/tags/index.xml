@@ -6,26 +6,53 @@
     <description>Recent content in Tags on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 23:23:53 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 19:10:12 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>angular</title>
-      <link>https://kxming.github.io/kxming/tags/angular/</link>
-      <pubDate>Sun, 26 May 2019 23:23:53 +0800</pubDate>
+      <title>tag1</title>
+      <link>https://kxming.github.io/kxming/tags/tag1/</link>
+      <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
       
-      <guid>https://kxming.github.io/kxming/tags/angular/</guid>
+      <guid>https://kxming.github.io/kxming/tags/tag1/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tool</title>
+      <title>tag2</title>
+      <link>https://kxming.github.io/kxming/tags/tag2/</link>
+      <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/tags/tag2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Storybook</title>
+      <link>https://kxming.github.io/kxming/tags/storybook/</link>
+      <pubDate>Thu, 30 May 2019 19:07:49 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/tags/storybook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tool</title>
       <link>https://kxming.github.io/kxming/tags/tool/</link>
-      <pubDate>Sun, 26 May 2019 23:23:53 +0800</pubDate>
+      <pubDate>Thu, 30 May 2019 19:07:49 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/tags/tool/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Angular</title>
+      <link>https://kxming.github.io/kxming/tags/angular/</link>
+      <pubDate>Sun, 26 May 2019 23:23:53 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/tags/angular/</guid>
       <description></description>
     </item>
     
