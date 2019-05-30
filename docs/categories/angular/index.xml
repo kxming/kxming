@@ -6,10 +6,19 @@
     <description>Recent content in Angular on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 May 2019 23:23:53 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 May 2019 19:10:12 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/categories/angular/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nrwl</title>
+      <link>https://kxming.github.io/kxming/2019/05/nrwl/</link>
+      <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/05/nrwl/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Compodoc</title>
