@@ -38,7 +38,7 @@ sb --version
    sb init
    ```
 
-   
+
 
 2. React
 
@@ -47,7 +47,7 @@ sb --version
    sb init
    ```
 
-   
+
 
 3. Vue
 
@@ -56,7 +56,7 @@ sb --version
    sb init
    ```
 
-   
+
 
 4. HTML
 
@@ -91,11 +91,11 @@ sb --version
 
        ```javascript
        import { configure } from '@storybook/html';
-       
+
        function loadStories() {
          require('../stories/index.js');
        }
-       
+
        configure(loadStories, module);
        ```
 
@@ -107,7 +107,7 @@ sb --version
 
        ```javascript
        import { storiesOf } from '@storybook/html';
-       
+
        storiesOf('Button', module)
          .add('with text', () => '<button class="btn">Hello World</button>')
          .add('with emoji', () => {
@@ -117,5 +117,5 @@ sb --version
          });
        ```
 
-       
+
 
