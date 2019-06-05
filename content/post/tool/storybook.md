@@ -34,25 +34,25 @@ sb --version
 1. Angular
 
    * 自动设置
-   
+
      ```
      cd angular-project
      sb init
      ```
-   
+
    * 手动设置
-   
+
      - 添加依赖
-   
+
        ```
        cd react-project
        npm install --save-dev @storybook/angular babel-loader @babel/core
        ```
-   
-       
-   
+
+
+
      - 添加npm脚本
-   
+
        ```
        {
          "scripts": {
@@ -60,25 +60,25 @@ sb --version
          }
        }
        ```
-   
-       
-   
+
+
+
      - 创建配置文件
-   
+
        ```
        // 创建.storybook/config.js
        import { configure } from '@storybook/angular';
-       
+
        function loadStories() {
          require('../stories/index.js');
          // You can require as many stories as you need.
        }
-       
+
        configure(loadStories, module);
        ```
-   
+
      - Storybook Typescript配置
-   
+
        ```
        // 在.storybook/tsconfig.json添加如下内容：
        {
@@ -94,16 +94,16 @@ sb --version
          ]
        }
        ```
-   
-       
-   
+
+
+
      - 编写stories
-   
+
        ```
        // 在..storybook/index.js中编写下面代码：
        import { storiesOf } from '@storybook/angular';
        import { Button } from '@storybook/angular/demo';
-       
+
        storiesOf('My Button', module)
         .add('with text', () => ({
            component: Button,
@@ -118,13 +118,13 @@ sb --version
            },
          }));
        ```
-   
-       
-   
+
+
+
      - 运行
-   
+
        `npm run storybook`
-   
+
 2. React
 
    * 自动设置
@@ -143,7 +143,7 @@ sb --version
        npm install --save-dev @storybook/react babel-loader @babel/core
        ````
 
-       
+
 
      * 添加npm脚本
 
@@ -155,23 +155,23 @@ sb --version
        }
        ```
 
-       
+
 
      * 创建配置文件
 
        ```
        // 创建.storybook/config.js
        import { configure } from '@storybook/react';
-       
+
        function loadStories() {
          require('../stories/index.js');
          // You can require as many stories as you need.
        }
-       
+
        configure(loadStories, module);
        ```
 
-       
+
 
      * 编写stories
 
@@ -180,17 +180,17 @@ sb --version
        import React from 'react';
        import { storiesOf } from '@storybook/react';
        import { Button } from '@storybook/react/demo';
-       
+
        storiesOf('Button', module)
          .add('with text', () => (
            <Button>Hello Button</Button>
          ))
          .add('with emoji', () => (
            <Button><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Button>
-         ));   
+         ));
        ```
 
-       
+
 
      * 运行
 
@@ -201,27 +201,27 @@ sb --version
 3. Vue
 
    * 自动设置
-   
+
      ```
      cd vue-project
      sb init --type vue
      ```
-   
-     
-   
+
+
+
    * 手动设置
-   
+
      - 添加依赖
-   
+
        ```
        cd react-project
        npm install --save-dev @storybook/vue vue-loader vue-template-compiler @babel/core babel-loader babel-preset-vue
        ```
-   
-       
-   
+
+
+
      - 添加npm脚本
-   
+
        ```
        {
          "scripts": {
@@ -229,33 +229,33 @@ sb --version
          }
        }
        ```
-   
-       
-   
+
+
+
      - 创建配置文件
-   
+
        ```
        // 创建.storybook/config.js
        import { configure } from '@storybook/vue';
-       
+
        function loadStories() {
          require('../stories/index.js');
          // You can require as many stories as you need.
        }
-       
+
        configure(loadStories, module);
        ```
-   
-       
-   
+
+
+
      - 编写stories
-   
+
        ```
        // 在..storybook/index.js中编写下面代码：
        import Vue from 'vue';
        import { storiesOf } from '@storybook/vue';
        import MyButton from './Button.vue';
-       
+
        storiesOf('Button', module)
          .add('with text', () => '<my-button>with text</my-button>')
          .add('with emoji', () => '<my-button>😀 😎 👍 💯</my-button>')
@@ -264,11 +264,11 @@ sb --version
            template: '<my-button :rounded="true">rounded</my-button>'
          }));
        ```
-   
-       
-   
+
+
+
      - 运行
-   
+
        `npm run storybook`
 
 
@@ -304,27 +304,27 @@ sb --version
 
      * 创建配置文件
 
-       
-     
+
+
   ```javascript
        // 创建.storybook/config.js。
        import { configure } from '@storybook/html';
-       
+
   function loadStories() {
          require('../stories/index.js');
        }
-  
+
        configure(loadStories, module);
   ```
-     
+
 * 编写stories
-     
-  
-     
+
+
+
        ```javascript
   // 在..storybook/index.js中编写下面代码：
      import { storiesOf } from '@storybook/html';
-       
+
        storiesOf('Button', module)
          .add('with text', () => '<button class="btn">Hello World</button>')
          .add('with emoji', () => {
@@ -333,9 +333,9 @@ sb --version
            return button;
          });
        ```
-       
+
      * 运行
-     
+
        `npm run storybook`
 
 ### 配置
