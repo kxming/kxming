@@ -123,7 +123,7 @@ sb --version
 
      - 运行
 
-       `npm run storybook`
+       			`npm run storybook`
 
 2. React
 
@@ -192,9 +192,9 @@ sb --version
 
 
 
-     * 运行
+     - 运行
 
-       `npm run storybook`
+       			`npm run storybook`
 
 
 
@@ -211,7 +211,7 @@ sb --version
 
    * 手动设置
 
-     - 添加依赖
+     * 添加依赖
 
        ```
        cd react-project
@@ -220,7 +220,7 @@ sb --version
 
 
 
-     - 添加npm脚本
+     * 添加npm脚本
 
        ```
        {
@@ -232,7 +232,7 @@ sb --version
 
 
 
-     - 创建配置文件
+     * 创建配置文件
 
        ```
        // 创建.storybook/config.js
@@ -248,7 +248,7 @@ sb --version
 
 
 
-     - 编写stories
+     * 编写stories
 
        ```
        // 在..storybook/index.js中编写下面代码：
@@ -269,7 +269,7 @@ sb --version
 
      - 运行
 
-       `npm run storybook`
+       			`npm run storybook`
 
 
 
@@ -292,38 +292,40 @@ sb --version
        npm install @storybook/html babel-loader @babel/core --save-dev
        ```
 
+
+
      * 添加npm脚本
 
-       ```javascript
+       ```
        {
-       	"scripts": {
-       		"storybook": "start-storybook",
-       	}
+         "scripts": {
+           "storybook": "start-storybook"
+         }
        }
        ```
 
+
+
      * 创建配置文件
 
-
-
-  ```javascript
+       ```
        // 创建.storybook/config.js。
        import { configure } from '@storybook/html';
 
-  function loadStories() {
+       function loadStories() {
          require('../stories/index.js');
        }
 
-       configure(loadStories, module);
-  ```
-
-* 编写stories
+         configure(loadStories, module);
+       ```
 
 
 
-       ```javascript
-  // 在..storybook/index.js中编写下面代码：
-     import { storiesOf } from '@storybook/html';
+     * 编写stories
+
+       ```
+       // 在..storybook/index.js中编写下面代码：
+       import { storiesOf } from '@storybook/html';
 
        storiesOf('Button', module)
          .add('with text', () => '<button class="btn">Hello World</button>')
@@ -334,9 +336,13 @@ sb --version
          });
        ```
 
-     * 运行
 
-       `npm run storybook`
+
+     - 运行
+
+       			`npm run storybook`
+
+
 
 ### 配置
 
