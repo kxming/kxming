@@ -6,7 +6,7 @@
     <description>Recent content in Categories on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 May 2019 19:10:12 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 Jun 2019 22:02:09 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,36 @@
     <item>
       <title>Angular</title>
       <link>https://kxming.github.io/kxming/categories/angular/</link>
-      <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
+      <pubDate>Sat, 08 Jun 2019 22:02:09 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/categories/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>form</title>
+      <link>https://kxming.github.io/kxming/categories/form/</link>
+      <pubDate>Sat, 08 Jun 2019 22:02:09 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/categories/form/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>animate</title>
+      <link>https://kxming.github.io/kxming/categories/animate/</link>
+      <pubDate>Sat, 08 Jun 2019 20:23:29 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/categories/animate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ng-router</title>
+      <link>https://kxming.github.io/kxming/categories/ng-router/</link>
+      <pubDate>Sat, 08 Jun 2019 14:56:31 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/categories/ng-router/</guid>
       <description></description>
     </item>
     

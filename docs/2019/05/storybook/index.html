@@ -8,18 +8,26 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="小明同学">
 <meta name="keywords" content="tech, js, es6, angular, vue, typescript, rxjs">
-<meta name="description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。">
+<meta name="description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。
+
+Storybook支持Angular、React、Vue、ReactNative等组件。">
 
 
-<meta property="og:description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。">
+<meta property="og:description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。
+
+Storybook支持Angular、React、Vue、ReactNative等组件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Storybook">
 <meta name="twitter:title" content="Storybook">
 <meta property="og:url" content="https://kxming.github.io/kxming/2019/05/storybook/">
 <meta property="twitter:url" content="https://kxming.github.io/kxming/2019/05/storybook/">
 <meta property="og:site_name" content="KXMing">
-<meta property="og:description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。">
-<meta name="twitter:description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。">
+<meta property="og:description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。
+
+Storybook支持Angular、React、Vue、ReactNative等组件。">
+<meta name="twitter:description" content="Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。
+
+Storybook支持Angular、React、Vue、ReactNative等组件。">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -263,6 +271,299 @@
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <p>Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。</p>
+
+<p>Storybook支持Angular、React、Vue、ReactNative等组件。</p>
+
+<h3 id="示例">示例</h3>
+
+<ul>
+<li><a href="http://airbnb.io/react-dates/">Demo of React Dates</a> - <a href="https://github.com/airbnb/react-dates">source</a></li>
+<li><a href="http://necolas.github.io/react-native-web/storybook/">Demo of React Native Web</a> - <a href="https://github.com/necolas/react-native-web">source</a></li>
+</ul>
+
+<h3 id="安装">安装</h3>
+
+<pre><code>npm install -g @storybook/cli
+sb --version
+</code></pre>
+
+<h3 id="使用">使用</h3>
+
+<ol>
+<li><p>Angular</p>
+
+<ul>
+<li><p>自动设置</p>
+
+<pre><code>cd angular-project
+sb init
+</code></pre></li>
+
+<li><p>手动设置</p>
+
+<ul>
+<li><p>添加依赖</p>
+
+<pre><code>cd react-project
+npm install --save-dev @storybook/angular babel-loader @babel/core
+</code></pre></li>
+
+<li><p>添加npm脚本</p>
+
+<pre><code>{
+&quot;scripts&quot;: {
+&quot;storybook&quot;: &quot;start-storybook&quot;
+}
+}
+</code></pre></li>
+
+<li><p>创建配置文件</p>
+
+<pre><code>// 创建.storybook/config.js
+import { configure } from '@storybook/angular';
+
+function loadStories() {
+require('../stories/index.js');
+// You can require as many stories as you need.
+}
+
+configure(loadStories, module);
+</code></pre></li>
+
+<li><p>Storybook Typescript配置</p>
+
+<pre><code>// 在.storybook/tsconfig.json添加如下内容：
+{
+&quot;extends&quot;: &quot;../tsconfig.json&quot;,
+&quot;exclude&quot;: [
+&quot;../src/test.ts&quot;,
+&quot;../src/**/*.spec.ts&quot;,
+&quot;../projects/**/*.spec.ts&quot;
+],
+&quot;include&quot;: [
+&quot;../src/**/*&quot;,
+&quot;../projects/**/*&quot;
+]
+}
+</code></pre></li>
+
+<li><p>编写stories</p>
+
+<pre><code>// 在..storybook/index.js中编写下面代码：
+import { storiesOf } from '@storybook/angular';
+import { Button } from '@storybook/angular/demo';
+
+storiesOf('My Button', module)
+.add('with text', () =&gt; ({
+component: Button,
+props: {
+ text: 'Hello Button',
+},
+}))
+.add('with emoji', () =&gt; ({
+component: Button,
+props: {
+ text: '😀 😎 👍 💯',
+},
+}));
+</code></pre></li>
+
+<li><p>运行</p>
+
+<pre><code>`npm run storybook`
+</code></pre></li>
+</ul></li>
+</ul></li>
+
+<li><p>React</p>
+
+<ul>
+<li><p>自动设置</p>
+
+<pre><code>cd react-project
+sb init --type react
+</code></pre></li>
+
+<li><p>手动设置</p>
+
+<ul>
+<li><p>添加依赖</p>
+
+<pre><code>cd react-project
+npm install --save-dev @storybook/react babel-loader @babel/core
+</code></pre></li>
+
+<li><p>添加npm脚本</p>
+
+<pre><code>{
+&quot;scripts&quot;: {
+&quot;storybook&quot;: &quot;start-storybook&quot;
+}
+}
+</code></pre></li>
+
+<li><p>创建配置文件</p>
+
+<pre><code>// 创建.storybook/config.js
+import { configure } from '@storybook/react';
+
+function loadStories() {
+require('../stories/index.js');
+// You can require as many stories as you need.
+}
+
+configure(loadStories, module);
+</code></pre></li>
+
+<li><p>编写stories</p>
+
+<pre><code>// 在..storybook/index.js中编写下面代码：
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { Button } from '@storybook/react/demo';
+
+storiesOf('Button', module)
+.add('with text', () =&gt; (
+&lt;Button&gt;Hello Button&lt;/Button&gt;
+))
+.add('with emoji', () =&gt; (
+&lt;Button&gt;&lt;span role=&quot;img&quot; aria-label=&quot;so cool&quot;&gt;😀 😎 👍 💯&lt;/span&gt;&lt;/Button&gt;
+));
+</code></pre></li>
+
+<li><p>运行</p>
+
+<pre><code>`npm run storybook`
+</code></pre></li>
+</ul></li>
+</ul></li>
+
+<li><p>Vue</p>
+
+<ul>
+<li><p>自动设置</p>
+
+<pre><code>cd vue-project
+sb init --type vue
+</code></pre></li>
+
+<li><p>手动设置</p>
+
+<ul>
+<li><p>添加依赖</p>
+
+<pre><code>cd react-project
+npm install --save-dev @storybook/vue vue-loader vue-template-compiler @babel/core babel-loader babel-preset-vue
+</code></pre></li>
+
+<li><p>添加npm脚本</p>
+
+<pre><code>{
+&quot;scripts&quot;: {
+&quot;storybook&quot;: &quot;start-storybook&quot;
+}
+}
+</code></pre></li>
+
+<li><p>创建配置文件</p>
+
+<pre><code>// 创建.storybook/config.js
+import { configure } from '@storybook/vue';
+
+function loadStories() {
+require('../stories/index.js');
+// You can require as many stories as you need.
+}
+
+configure(loadStories, module);
+</code></pre></li>
+
+<li><p>编写stories</p>
+
+<pre><code>// 在..storybook/index.js中编写下面代码：
+import Vue from 'vue';
+import { storiesOf } from '@storybook/vue';
+import MyButton from './Button.vue';
+
+storiesOf('Button', module)
+.add('with text', () =&gt; '&lt;my-button&gt;with text&lt;/my-button&gt;')
+.add('with emoji', () =&gt; '&lt;my-button&gt;😀 😎 👍 💯&lt;/my-button&gt;')
+.add('as a component', () =&gt; ({
+components: { MyButton },
+template: '&lt;my-button :rounded=&quot;true&quot;&gt;rounded&lt;/my-button&gt;'
+}));
+</code></pre></li>
+
+<li><p>运行</p>
+
+<pre><code>`npm run storybook`
+</code></pre></li>
+</ul></li>
+</ul></li>
+
+<li><p>HTML</p>
+
+<ul>
+<li><p>自动设置</p>
+
+<pre><code>cd project
+sb init --type html
+npm run storybook
+</code></pre></li>
+
+<li><p>手动设置</p>
+
+<ul>
+<li><p>添加依赖</p>
+
+<pre><code>cd project
+npm install @storybook/html babel-loader @babel/core --save-dev
+</code></pre></li>
+
+<li><p>添加npm脚本</p>
+
+<pre><code>{
+&quot;scripts&quot;: {
+&quot;storybook&quot;: &quot;start-storybook&quot;
+}
+}
+</code></pre></li>
+
+<li><p>创建配置文件</p>
+
+<pre><code>// 创建.storybook/config.js。
+import { configure } from '@storybook/html';
+
+function loadStories() {
+require('../stories/index.js');
+}
+
+configure(loadStories, module);
+</code></pre></li>
+
+<li><p>编写stories</p>
+
+<pre><code>// 在..storybook/index.js中编写下面代码：
+import { storiesOf } from '@storybook/html';
+
+storiesOf('Button', module)
+.add('with text', () =&gt; '&lt;button class=&quot;btn&quot;&gt;Hello World&lt;/button&gt;')
+.add('with emoji', () =&gt; {
+const button = document.createElement('button');
+button.innerText = '😀 😎 👍 💯';
+return button;
+});
+</code></pre></li>
+
+<li><p>运行</p>
+
+<pre><code>`npm run storybook`
+</code></pre></li>
+</ul></li>
+</ul></li>
+</ol>
+
+<h3 id="配置">配置</h3>
               
             </div>
           </div>
@@ -510,6 +811,57 @@
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Form使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x表单。Angular表单是一个可选的服务，在它自己的<code>@angular/forms</code>包中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Animate使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x动画模块。Angular动画是一个可选的服务，在它自己的<code>@angular/animations</code>包 和 <code>@angular/platform-browser</code>中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Router使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x使用路由服务在页面之间导航。Angular路由器是一个可选的服务，在它自己的<code>@angular/router</code>包中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/nrwl/">
                 <h3 class="media-heading">Nrwl</h3>
               </a>
@@ -535,7 +887,9 @@
                   May 5, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。</p></div>
+              <div class="media-content hide-xs font-merryweather"><p>Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。</p>
+
+<p>Storybook支持Angular、React、Vue、ReactNative等组件。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -602,7 +956,7 @@
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         5 posts found
+         8 posts found
       </p>
     </div>
   </div>

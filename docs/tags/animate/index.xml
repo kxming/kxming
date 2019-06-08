@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>animate on KXMing</title>
+    <link>https://kxming.github.io/kxming/tags/animate/</link>
+    <description>Recent content in animate on KXMing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Jun 2019 20:23:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://kxming.github.io/kxming/tags/animate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Animate使用</title>
+      <link>https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 08 Jun 2019 20:23:29 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;本教程将讲解如何在angular8.x动画模块。Angular动画是一个可选的服务，在它自己的&lt;code&gt;@angular/animations&lt;/code&gt;包 和 &lt;code&gt;@angular/platform-browser&lt;/code&gt;中。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

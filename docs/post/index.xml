@@ -6,10 +6,37 @@
     <description>Recent content in Posts on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 30 May 2019 19:10:12 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 Jun 2019 22:02:09 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Form使用</title>
+      <link>https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 08 Jun 2019 22:02:09 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;本教程将讲解如何在angular8.x表单。Angular表单是一个可选的服务，在它自己的&lt;code&gt;@angular/forms&lt;/code&gt;包中。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Animate使用</title>
+      <link>https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 08 Jun 2019 20:23:29 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;本教程将讲解如何在angular8.x动画模块。Angular动画是一个可选的服务，在它自己的&lt;code&gt;@angular/animations&lt;/code&gt;包 和 &lt;code&gt;@angular/platform-browser&lt;/code&gt;中。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Router使用</title>
+      <link>https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 08 Jun 2019 14:56:31 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;本教程将讲解如何在angular8.x使用路由服务在页面之间导航。Angular路由器是一个可选的服务，在它自己的&lt;code&gt;@angular/router&lt;/code&gt;包中。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Nrwl</title>
@@ -26,7 +53,9 @@
       <pubDate>Thu, 30 May 2019 19:07:49 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/2019/05/storybook/</guid>
-      <description>&lt;p&gt;Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。&lt;/p&gt;
+
+&lt;p&gt;Storybook支持Angular、React、Vue、ReactNative等组件。&lt;/p&gt;</description>
     </item>
     
     <item>

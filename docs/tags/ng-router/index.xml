@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ng-router on KXMing</title>
+    <link>https://kxming.github.io/kxming/tags/ng-router/</link>
+    <description>Recent content in ng-router on KXMing</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Jun 2019 14:56:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://kxming.github.io/kxming/tags/ng-router/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Router使用</title>
+      <link>https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sat, 08 Jun 2019 14:56:31 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/</guid>
+      <description>&lt;p&gt;本教程将讲解如何在angular8.x使用路由服务在页面之间导航。Angular路由器是一个可选的服务，在它自己的&lt;code&gt;@angular/router&lt;/code&gt;包中。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

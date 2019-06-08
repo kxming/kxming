@@ -4,19 +4,88 @@
   
   <url>
     <loc>https://kxming.github.io/kxming/categories/angular/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kxming.github.io/kxming/categories/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kxming.github.io/kxming/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/post/</loc>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/</loc>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/angular/</loc>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/form/</loc>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/form/</loc>
+    <lastmod>2019-06-08T22:02:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-06-08T20:23:29+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/animate/</loc>
+    <lastmod>2019-06-08T20:23:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/animate/</loc>
+    <lastmod>2019-06-08T20:23:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-06-08T14:56:31+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/ng-router/</loc>
+    <lastmod>2019-06-08T14:56:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/tags/ng-router/</loc>
+    <lastmod>2019-06-08T14:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -27,20 +96,14 @@
   </url>
   
   <url>
+    <loc>https://kxming.github.io/kxming/tags/nrwl/</loc>
+    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kxming.github.io/kxming/2019/05/nrwl/</loc>
     <lastmod>2019-05-30T19:10:12+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/post/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/tags/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -50,13 +113,7 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/tags/tag1/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/tags/tag2/</loc>
+    <loc>https://kxming.github.io/kxming/tags/tool/</loc>
     <lastmod>2019-05-30T19:10:12+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -76,18 +133,6 @@
   <url>
     <loc>https://kxming.github.io/kxming/2019/05/storybook/</loc>
     <lastmod>2019-05-30T19:07:49+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/tags/tool/</loc>
-    <lastmod>2019-05-30T19:07:49+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://kxming.github.io/kxming/tags/angular/</loc>
-    <lastmod>2019-05-26T23:23:53+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
