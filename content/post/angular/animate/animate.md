@@ -24,7 +24,7 @@ keywords:
    import { NgModule } from '@angular/core';
    import { BrowserModule } from '@angular/platform-browser';
    import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-   
+
    @NgModule({
      imports: [
        BrowserModule,
@@ -48,7 +48,7 @@ keywords:
      transition,
      // ...
    } from '@angular/animations';
-   
+
    @Component({
      selector: 'app-root',
      templateUrl: 'app.component.html',
@@ -63,7 +63,7 @@ keywords:
 3. 动画函数，简单使用
 
    ```
-   // state()函数定义状态	
+   // state()函数定义状态
    state('open', style({
      height: '200px', // 样式属性使用小驼峰形式
      opacity: 1,
@@ -74,12 +74,12 @@ keywords:
      opacity: 0.5,
      backgroundColor: 'green'
    }))
-   
+
    // transition(转场状态方向，animate()函数)转场函数
    transition('open <=> closed', [
      animate('1s//持续时间 1s//延迟时间 ease-in//动画速度'，style)
    ]),
-   
+
    // trigger()动画触发器
    @Component({
      selector: 'app-open-close',
@@ -96,11 +96,11 @@ keywords:
    })
    export class OpenCloseComponent {
      isOpen = true;
-   
+
      toggle() {
        this.isOpen = !this.isOpen;
      }
-   
+
    }
    ```
 
@@ -120,7 +120,7 @@ keywords:
        ]),
      ]),
    ],
-   
+
    //void状态为进入或离开页面的元素设置转场动画
    animations: [
      trigger('flyInOut', [
@@ -134,7 +134,7 @@ keywords:
        ])
      ])
    ]
-   
+
    //:enter、:leave是void => * 和 * => void的别名
    transition ( ':enter', [ ... ] );
    transition ( ':leave', [ ... ] );
@@ -147,7 +147,7 @@ keywords:
        animate('5s', style({ opacity: 0 }))
      ])
    ])
-   
+
    //:increment和:decrement
    trigger('filterAnimation', [
      transition(':enter, * => 0, * => -1', []),
@@ -167,16 +167,16 @@ keywords:
        ])
      ]),
    ])
-   
+
    //[@.disabled]指令通过Boolean值禁用该指令所在元素及其子元素上的动画
-   
+
    //trigger()函数回调
    <div [@openClose]="isOpen ? 'open' : 'closed'"
        (@openClose.start)="onAnimationEvent($event)"
        (@openClose.done)="onAnimationEvent($event)"
        class="open-close-container">
    </div>
-   
+
    //关键帧动画keyframes()函数
    transition('* => active', [
      animate('2s', keyframes([
@@ -184,7 +184,7 @@ keywords:
        style({ backgroundColor: 'red', offset: 0 }),
        style({ backgroundColor: 'orange', offset: 0 })
    ]))
-   
+
    //通配符*自动计算属性
    animations: [
      trigger('shrinkOut', [
@@ -197,7 +197,7 @@ keywords:
    ]
    ```
 
-   
+
 
 5. 复杂序列
 
@@ -224,7 +224,7 @@ keywords:
    export class HeroListPageComponent implements OnInit {
      @HostBinding('@pageAnimations')
    }
-   
+
    // 并行动画
    animations: [
      trigger('flyInOut', [
@@ -257,7 +257,7 @@ keywords:
        ])
      ])
    ]
-   
+
    // 顺序动画
    @Component({
      templete:`<ul class="heroes" [@filterAnimation]="heroTotal"></ul>`,
@@ -287,7 +287,7 @@ keywords:
    }
    ```
 
-   
+
 
 6. 可复用动画
 
@@ -297,7 +297,7 @@ keywords:
      animation, trigger, animateChild, group,
      transition, animate, style, query
    } from '@angular/animations';
-   
+
    export const transAnimation = animation([
      style({
        height: '{{ height }}',
@@ -306,11 +306,11 @@ keywords:
      }),
      animate('{{ time }}')
    ]);
-   
+
    import { Component } from '@angular/core';
    import { useAnimation, transition, trigger, style, animate } from '@angular/animations';
    import { transAnimation } from './animations';
-   
+
    @Component({
        trigger('openClose', [
          transition('open => closed', [
@@ -328,7 +328,7 @@ keywords:
    })
    ```
 
-   
+
 
 7. 路由转场动画
 
@@ -337,12 +337,12 @@ keywords:
    <div [@routeAnimations]="prepareRoute(outlet)" >
      <router-outlet #outlet="outlet"></router-outlet>
    </div>
-   
+
    //component.ts
    prepareRoute(outlet: RouterOutlet) {
      return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animation'];
    }
-   
+
    //animate.ts
    export const slideInAnimation =
      trigger('routeAnimations', [
@@ -397,4 +397,4 @@ keywords:
      ]);
    ```
 
-   
+
