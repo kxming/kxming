@@ -6,7 +6,7 @@
     <description>Recent content in Tags on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jun 2019 22:02:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 19:22:16 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>angular</title>
       <link>https://kxming.github.io/kxming/tags/angular/</link>
-      <pubDate>Sat, 08 Jun 2019 22:02:09 +0800</pubDate>
+      <pubDate>Tue, 11 Jun 2019 19:22:16 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/tags/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>library</title>
+      <link>https://kxming.github.io/kxming/tags/library/</link>
+      <pubDate>Tue, 11 Jun 2019 19:22:16 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/tags/library/</guid>
       <description></description>
     </item>
     
@@ -57,7 +66,7 @@
     </item>
     
     <item>
-      <title>Tool</title>
+      <title>tool</title>
       <link>https://kxming.github.io/kxming/tags/tool/</link>
       <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
       

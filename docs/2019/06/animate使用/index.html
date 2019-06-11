@@ -272,7 +272,7 @@
 <pre><code>import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-   
+
 @NgModule({
  imports: [
    BrowserModule,
@@ -295,7 +295,7 @@ import {
  transition,
  // ...
 } from '@angular/animations';
-   
+
 @Component({
  selector: 'app-root',
  templateUrl: 'app.component.html',
@@ -308,7 +308,7 @@ import {
 
 <li><p>动画函数，简单使用</p>
 
-<pre><code>// state()函数定义状态 
+<pre><code>// state()函数定义状态
 state('open', style({
  height: '200px', // 样式属性使用小驼峰形式
  opacity: 1,
@@ -319,12 +319,12 @@ state('closed', style({
  opacity: 0.5,
  backgroundColor: 'green'
 }))
-   
+
 // transition(转场状态方向，animate()函数)转场函数
 transition('open &lt;=&gt; closed', [
  animate('1s//持续时间 1s//延迟时间 ease-in//动画速度'，style)
 ]),
-   
+
 // trigger()动画触发器
 @Component({
  selector: 'app-open-close',
@@ -341,11 +341,11 @@ transition('open &lt;=&gt; closed', [
 })
 export class OpenCloseComponent {
  isOpen = true;
-   
+
  toggle() {
    this.isOpen = !this.isOpen;
  }
-   
+
 }
 </code></pre></li>
 
@@ -364,7 +364,7 @@ animations: [
    ]),
  ]),
 ],
-   
+
 //void状态为进入或离开页面的元素设置转场动画
 animations: [
  trigger('flyInOut', [
@@ -378,7 +378,7 @@ animations: [
    ])
  ])
 ]
-   
+
 //:enter、:leave是void =&gt; * 和 * =&gt; void的别名
 transition ( ':enter', [ ... ] );
 transition ( ':leave', [ ... ] );
@@ -391,7 +391,7 @@ trigger('myInsertRemoveTrigger', [
    animate('5s', style({ opacity: 0 }))
  ])
 ])
-   
+
 //:increment和:decrement
 trigger('filterAnimation', [
  transition(':enter, * =&gt; 0, * =&gt; -1', []),
@@ -411,16 +411,16 @@ trigger('filterAnimation', [
    ])
  ]),
 ])
-   
+
 //[@.disabled]指令通过Boolean值禁用该指令所在元素及其子元素上的动画
-   
+
 //trigger()函数回调
 &lt;div [@openClose]=&quot;isOpen ? 'open' : 'closed'&quot;
    (@openClose.start)=&quot;onAnimationEvent($event)&quot;
    (@openClose.done)=&quot;onAnimationEvent($event)&quot;
    class=&quot;open-close-container&quot;&gt;
 &lt;/div&gt;
-   
+
 //关键帧动画keyframes()函数
 transition('* =&gt; active', [
  animate('2s', keyframes([
@@ -428,7 +428,7 @@ transition('* =&gt; active', [
    style({ backgroundColor: 'red', offset: 0 }),
    style({ backgroundColor: 'orange', offset: 0 })
 ]))
-   
+
 //通配符*自动计算属性
 animations: [
  trigger('shrinkOut', [
@@ -467,7 +467,7 @@ trigger('pageAnimations', [
 export class HeroListPageComponent implements OnInit {
 @HostBinding('@pageAnimations')
 }
-   
+
 // 并行动画
 animations: [
 trigger('flyInOut', [
@@ -500,7 +500,7 @@ transition('* =&gt; void', [
 ])
 ])
 ]
-   
+
 // 顺序动画
 @Component({
 templete:`&lt;ul class=&quot;heroes&quot; [@filterAnimation]=&quot;heroTotal&quot;&gt;&lt;/ul&gt;`,
@@ -538,7 +538,7 @@ import {
  animation, trigger, animateChild, group,
  transition, animate, style, query
 } from '@angular/animations';
-   
+
 export const transAnimation = animation([
  style({
    height: '{{ height }}',
@@ -547,11 +547,11 @@ export const transAnimation = animation([
  }),
  animate('{{ time }}')
 ]);
-   
+
 import { Component } from '@angular/core';
 import { useAnimation, transition, trigger, style, animate } from '@angular/animations';
 import { transAnimation } from './animations';
-   
+
 @Component({
    trigger('openClose', [
      transition('open =&gt; closed', [
@@ -575,12 +575,12 @@ import { transAnimation } from './animations';
 &lt;div [@routeAnimations]=&quot;prepareRoute(outlet)&quot; &gt;
  &lt;router-outlet #outlet=&quot;outlet&quot;&gt;&lt;/router-outlet&gt;
 &lt;/div&gt;
-   
+
 //component.ts
 prepareRoute(outlet: RouterOutlet) {
  return outlet &amp;&amp; outlet.activatedRouteData &amp;&amp; outlet.activatedRouteData['animation'];
 }
-   
+
 //animate.ts
 export const slideInAnimation =
  trigger('routeAnimations', [
@@ -882,6 +882,23 @@ export const slideInAnimation =
           <div class="media">
             
             <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/library/">
+                <h3 class="media-heading">Library</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Angular Library</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
               <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/">
                 <h3 class="media-heading">Form使用</h3>
               </a>
@@ -1027,7 +1044,7 @@ export const slideInAnimation =
          data-message-zero=""
          data-message-one=""
          data-message-other="">
-         8 posts found
+         9 posts found
       </p>
     </div>
   </div>

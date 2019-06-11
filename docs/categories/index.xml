@@ -6,17 +6,26 @@
     <description>Recent content in Categories on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Jun 2019 22:02:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 19:22:16 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Angular</title>
+      <title>angular</title>
       <link>https://kxming.github.io/kxming/categories/angular/</link>
-      <pubDate>Sat, 08 Jun 2019 22:02:09 +0800</pubDate>
+      <pubDate>Tue, 11 Jun 2019 19:22:16 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/categories/angular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>library</title>
+      <link>https://kxming.github.io/kxming/categories/library/</link>
+      <pubDate>Tue, 11 Jun 2019 19:22:16 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/categories/library/</guid>
       <description></description>
     </item>
     
