@@ -17,7 +17,7 @@
       <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/2019/05/nrwl/</guid>
-      <description></description>
+      <description>&lt;p&gt;Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。&lt;/p&gt;</description>
     </item>
     
   </channel>

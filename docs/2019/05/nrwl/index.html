@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="小明同学">
 <meta name="keywords" content="tech, js, es6, angular, vue, typescript, rxjs">
-<meta name="description" content="">
+<meta name="description" content="Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。">
 
 
-<meta property="og:description" content="">
+<meta property="og:description" content="Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nrwl">
 <meta name="twitter:title" content="Nrwl">
 <meta property="og:url" content="https://kxming.github.io/kxming/2019/05/nrwl/">
 <meta property="twitter:url" content="https://kxming.github.io/kxming/2019/05/nrwl/">
 <meta property="og:site_name" content="KXMing">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。">
+<meta name="twitter:description" content="Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -266,7 +266,467 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <p>Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。</p>
+
+<h1 id="table-of-contents">目录</h1><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#安装">安装</a></li>
+<li><a href="#创建应用程序">创建应用程序</a>
+<ul>
+<li>
+<ul>
+<li><a href="#创建工作区">创建工作区</a></li>
+<li><a href="#创建angular应用程序">创建angular应用程序</a></li>
+<li><a href="#运行应用程序">运行应用程序</a></li>
+<li><a href="#创建react应用程序">创建react应用程序</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#添加node应用程序">添加node应用程序</a>
+<ul>
+<li>
+<ul>
+<li><a href="#添加nest-js的功能">添加nest.js的功能</a></li>
+<li><a href="#添加express-js的功能">添加express.js的功能</a></li>
+<li><a href="#添加node-js的功能">添加node.js的功能</a></li>
+<li><a href="#创建nest应用程序">创建nest应用程序</a></li>
+<li><a href="#运行应用程序-1">运行应用程序</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#创建共享代码库">创建共享代码库</a>
+<ul>
+<li>
+<ul>
+<li><a href="#创建angular与nest公共接口">创建angular与nest公共接口</a></li>
+<li><a href="#创建angular组件库">创建angular组件库</a></li>
+<li><a href="#创建angular与react共享组件库">创建angular与react共享组件库</a>
+<ul>
+<li><a href="#在angular中使用">在angular中使用</a></li>
+<li><a href="#在react中使用">在react中使用</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#创建项目依赖图">创建项目依赖图</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+
+<h3 id="安装">安装</h3>
+
+<p><code>npm install -g  @nrwl/schematics</code></p>
+
+<h3 id="创建应用程序">创建应用程序</h3>
+
+<h5 id="创建工作区">创建工作区</h5>
+
+<p><code>npx</code>使用请看<a href="http://www.ruanyifeng.com/blog/2019/02/npx.html">阮一峰教程</a>。</p>
+
+<p><code>npx  --ignore-existing create-nx-workspace myorg</code></p>
+
+<p>创建过程中可以选择工作区类型:</p>
+
+<pre><code>  empty             [an empty workspace]
+  angular           [a workspace with a single Angular application]
+  angular-ivy       [a workspace with a single Angular application built using Ivy]
+  react             [a workspace with a single React application]
+  web components    [a workspace with a single app built using web components]
+  full-stack        [a workspace with a full stack application (NestJS + Angular Ivy)]
+</code></pre>
+
+<p>创建完成后<code>myorg</code>目录中的内容为：</p>
+
+<pre><code>myorg/
+├── apps/
+├── libs/
+├── tools/
+├── nx.json
+├── angular.json
+├── package.json
+├── tsconfig.json
+├── tslint.json
+└── README.md
+</code></pre>
+
+<h5 id="创建angular应用程序">创建angular应用程序</h5>
+
+<p>首先添加创建angular应用程序的功能：</p>
+
+<p><code>ng add @nrwl/angular</code></p>
+
+<p>也可添加不同功能的应用程序：</p>
+
+<pre><code>ng add @nrwl/angular # Adds Angular capabilities
+ng add @nrwl/react # Adds React capabilities
+ng add @nrwl/nest # Adds Nest capabilities
+ng add @nrwl/express # Adds Express capabilities
+ng add @nrwl/web # Adds Web capabilities
+ng add @nrwl/node # Adds Node capabilities
+</code></pre>
+
+<p>然后创建angular应用程序：</p>
+
+<p><code>ng g @nrwl/angular:application todos</code></p>
+
+<p>创建完成后目录内容为：</p>
+
+<pre><code>myorg/
+├── apps/
+│   ├── todos/
+│   │   ├── src/
+│   │   │   ├── app/
+│   │   │   ├── assets/
+│   │   │   ├── environments/
+│   │   │   ├── favicon.ico
+│   │   │   ├── index.html
+│   │   │   ├── main.ts
+│   │   │   ├── polyfills.ts
+│   │   │   ├── styles.scss
+│   │   │   └── test.ts
+│   │   ├── browserslist
+│   │   ├── jest.conf.js
+│   │   ├── tsconfig.app.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.spec.json
+│   │   └── tslint.json
+│   └── todos-e2e/
+│       ├── src/
+│       │   ├── fixtures/
+│       │   │   └── example.json
+│       │   ├── integration/
+│       │   │   └── app.spec.ts
+│       │   ├── plugins/
+│       │   │   └── index.ts
+│       │   └── support/
+│       │       ├── app.po.ts
+│       │       ├── commands.ts
+│       │       └── index.ts
+│       ├── cypress.json
+│       ├── tsconfig.e2e.json
+│       ├── tsconfig.json
+│       └── tslint.json
+├── libs/
+├── tools/
+├── angular.json
+├── nx.json
+├── package.json
+├── tsconfig.json
+├── tslint.json
+└── README.md
+</code></pre>
+
+<h5 id="运行应用程序">运行应用程序</h5>
+
+<pre><code>ng serve todos
+</code></pre>
+
+<h5 id="创建react应用程序">创建react应用程序</h5>
+
+<p>首先添加创建react应用程序的功能：</p>
+
+<p><code>ng add @nrwl/react</code></p>
+
+<p>然后创建react应用程序：</p>
+
+<p><code>ng g @nrwl/react:app reactapp</code></p>
+
+<p>创建完成后目录内容为：</p>
+
+<pre><code>happynrwl/
+├── apps/
+│   ├── todos/
+│   ├── todos-e2e/
+│   ├── reactapp/
+│   │   ├── src/
+│   │   │   ├── app/
+│   │   │   │   ├── app.css
+│   │   │   │   ├── app.spec.tsx
+│   │   │   │   └── app.tsx
+│   │   │   ├── assets/
+│   │   │   ├── environments/
+│   │   │   ├── favicon.ico
+│   │   │   ├── index.html
+│   │   │   ├── main.ts
+│   │   │   ├── polyfills.ts
+│   │   │   ├── styles.scss
+│   │   │   └── test.ts
+│   │   ├── browserslist
+│   │   ├── jest.conf.js
+│   │   ├── tsconfig.app.json
+│   │   ├── tsconfig.json
+│   │   ├── tsconfig.spec.json
+│   │   └── tslint.json
+│   └── reactapp-e2e/
+│       ├── src/
+│       │   ├── integrations/
+│       │   │   └── app.spec.ts
+│       │   ├── fixtures/
+│       │   ├── plugins/
+│       │   └── support/
+│       ├── cypress.json
+│       ├── tsconfig.e2e.json
+│       └── tslint.json
+├── libs/
+├── README.md
+├── angular.json
+├── nx.json
+├── package.json
+├── tools/
+├── tsconfig.json
+└── tslint.json
+</code></pre>
+
+<p>运行应用程序</p>
+
+<p><code>ng serve reactapp</code></p>
+
+<h3 id="添加node应用程序">添加node应用程序</h3>
+
+<h5 id="添加nest-js的功能">添加nest.js的功能</h5>
+
+<p><code>ng add @nrwl/nest</code></p>
+
+<h5 id="添加express-js的功能">添加express.js的功能</h5>
+
+<p><code>ng add @nrwl/express</code></p>
+
+<h5 id="添加node-js的功能">添加node.js的功能</h5>
+
+<p><code>ng add @nrwl/node</code></p>
+
+<h5 id="创建nest应用程序">创建nest应用程序</h5>
+
+<p><code>ng g @nrwl/nest:app api --frontendProject=todos</code></p>
+
+<p><code>--frontendProject=todos</code>将为angular应用程序与api创建代理配置。</p>
+
+<p>创建完成后目录内容为：</p>
+
+<pre><code>myorg/
+├── apps/
+│   ├── todos/
+│   ├── todos-e2e/
+│   └── api/
+│       ├── jest.conf.js
+│       ├── proxy.conf.json
+│       ├── src/
+│       │   ├── app/
+│       │   │   ├── app.controller.ts
+│       │   │   ├── app.controller.spec.ts
+│       │   │   ├── app.module.ts
+│       │   │   ├── app.service.ts
+│       │   │   └── app.service.spec.ts
+│       │   ├── assets/
+│       │   ├── environments/
+│       │   │   ├── environment.ts
+│       │   │   └── environment.prod.ts
+│       │   └── main.ts
+│       ├── tsconfig.app.json
+│       ├── tsconfig.json
+│       ├── tsconfig.spec.json
+│       └── tslint.json
+├── libs/
+├── nx.json
+├── package.json
+├── tools/
+├── tsconfig.json
+└── tslint.json
+</code></pre>
+
+<h5 id="运行应用程序-1">运行应用程序</h5>
+
+<p><code>ng serve api</code></p>
+
+<h3 id="创建共享代码库">创建共享代码库</h3>
+
+<h5 id="创建angular与nest公共接口">创建angular与nest公共接口</h5>
+
+<p><code>ng g @nrwl/workspace:lib data</code></p>
+
+<p>创建完成后目录内容为：</p>
+
+<pre><code>myorg/
+├── apps/
+│   ├── todos/
+│   ├── todos-e2e/
+│   └── api/
+├── libs/
+│   └── data/
+│       ├── jest.conf.js
+│       ├── src/
+│       │   ├── lib/
+│       │   │   └── data.ts
+│       │   └── index.ts
+│       ├── tsconfig.app.json
+│       ├── tsconfig.json
+│       ├── tsconfig.spec.json
+│       └── tslint.json
+├── nx.json
+├── package.json
+├── tools/
+├── tsconfig.json
+└── tslint.json
+</code></pre>
+
+<p>在data.ts定义接口：</p>
+
+<pre><code>export interface Todo {
+  title: string;
+}
+</code></pre>
+
+<p>在angular中使用：</p>
+
+<pre><code>import { Todo } from '@myorg/data';
+</code></pre>
+
+<h5 id="创建angular组件库">创建angular组件库</h5>
+
+<p><code>ng g @nrwl/angular:lib ui</code></p>
+
+<p>创建完成后目录内容为：</p>
+
+<pre><code>myorg/
+├── apps/
+│   ├── todos/
+│   ├── todos-e2e/
+│   └── api/
+├── libs/
+│   ├── data/
+│   └── ui/
+│       ├── jest.conf.js
+│       ├── src/
+│       │   ├── lib/
+│       │   │   ├── ui.module.spec.ts
+│       │   │   └── ui.module.ts
+│       │   └── index.ts
+│       ├── tsconfig.app.json
+│       ├── tsconfig.json
+│       ├── tsconfig.spec.json
+│       └── tslint.json
+├── nx.json
+├── package.json
+├── tools/
+├── tsconfig.json
+└── tslint.json
+</code></pre>
+
+<p>添加组件</p>
+
+<p><code>ng g component todos --project=ui --export</code></p>
+
+<p>注册<code>CUSTOM_ELEMENTS_SCHEMA</code>模式，这将告诉Angular编译器在组件模板中看到非标准元素标签时不会出错。</p>
+
+<pre><code>//app.module
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+@NgModule({
+  ...
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  ...
+})
+export class AppModule {}
+</code></pre>
+
+<p>使用方法同angular-cli创建的lib相同。</p>
+
+<h5 id="创建angular与react共享组件库">创建angular与react共享组件库</h5>
+
+<p><code>ng g @nrwl/workspace:lib ui</code></p>
+
+<pre><code>myorg/
+├── apps/
+│   ├── todos/
+│   ├── todos-e2e/
+│   ├── reactapp/
+│   └── reactapp-e2e/
+├── libs/
+│   └── ui
+│       ├── src/
+│       │   ├── lib/
+│       │   └── index.ts
+│       ├── jest.conf.js
+│       ├── tsconfig.lib.json
+│       ├── tsconfig.json
+│       ├── tsconfig.spec.json
+│       └── tslint.json
+├── README.md
+├── angular.json
+├── nx.json
+├── package.json
+├── tools/
+├── tsconfig.json
+└── tslint.json
+</code></pre>
+
+<p>在lib下面创建greeting.element.ts组件：</p>
+
+<pre><code>export class GreetingElement extends HTMLElement {
+  public static observedAttributes = ['title'];
+
+  attributeChangedCallback() {
+    this.innerHTML = `&lt;h1&gt;Welcome to ${this.title}!&lt;/h1&gt;`;
+  }
+}
+
+customElements.define('happynrwl-greeting', GreetingElement);
+</code></pre>
+
+<p>并在index.js导出</p>
+
+<pre><code>export * from './lib/greeting.element';
+</code></pre>
+
+<h6 id="在angular中使用">在angular中使用</h6>
+
+<p>在main.js导入</p>
+
+<pre><code>import '@myorg/ui'; // &lt;-- the new library
+</code></pre>
+
+<p>在app.module注册<code>CUSTOM_ELEMENTS_SCHEMA</code>,然后就可以在angular中使用。</p>
+
+<h6 id="在react中使用">在react中使用</h6>
+
+<p>在main.tsx中导入：</p>
+
+<pre><code>import '@happynrwl/ui';
+</code></pre>
+
+<p>在<code>src</code>下面添加<code>intrinsic.d.ts</code>文件，创建如下内容：</p>
+
+<pre><code>declare namespace JSX {
+  interface IntrinsicElements {
+    [elemName: string]: any;
+  }
+}
+</code></pre>
+
+<p>在app.tsx中使用：</p>
+
+<pre><code>import * as React from 'react';
+import { Component } from 'react';
+
+import './app.css';
+
+export class App extends Component {
+  render() {
+    const title = 'reactapp';
+    return (
+      ...
+      &lt;happynrwl-greeting title={title} /&gt;
+      ...
+    );
+  }
+}
+</code></pre>
+
+<h3 id="创建项目依赖图">创建项目依赖图</h3>
+
+<p>Nx工作区可以包含几十个应用程序与库，随着代码库的增长，可以使用<code>npm run dep-graph</code>命令在浏览器中输出一个工作区依赖图。</p>
               
             </div>
           </div>
@@ -328,7 +788,7 @@
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#">
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
         
           <i class="fa fa-list"></i>
         </a>
@@ -444,7 +904,7 @@
       
       <li class="post-action">
         
-          <a class="post-action-btn btn btn--default" href="#">
+          <a class="post-action-btn btn btn--default" href="#table-of-contents">
         
           <i class="fa fa-list"></i>
         </a>
@@ -590,7 +1050,7 @@
                   May 5, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"></div>
+              <div class="media-content hide-xs font-merryweather"><p>Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -626,7 +1086,7 @@
                   May 5, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
+              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>

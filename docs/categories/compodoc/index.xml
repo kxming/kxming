@@ -17,7 +17,7 @@
       <pubDate>Sun, 26 May 2019 23:23:53 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/2019/05/compodoc/</guid>
-      <description>&lt;p&gt;Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。&lt;/p&gt;</description>
     </item>
     
   </channel>

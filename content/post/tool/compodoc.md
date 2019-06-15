@@ -11,7 +11,7 @@ tags:
 keywords:
 - compodoc
 ---
-Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。
+Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。
 <!--more-->
 
 
@@ -43,6 +43,16 @@ https://compodoc.github.io/compodoc-demo-todomvc-angular/overview.html
 
 `compodoc <src>  [option]`
 
+示例：
+
+```
+"scripts":{
+	"compodoc": "./node_modules/.bin/compodoc -p tsconfig.json -w -s --language=zh-CN"
+}
+```
+
+
+
 下面列出常用的配置属性：
 
 | 属性                   | 说明                                                         |
@@ -63,7 +73,7 @@ https://compodoc.github.io/compodoc-demo-todomvc-angular/overview.html
 
 ### 配置文件
 
-你可以在项目目录创建一个 **.compodocrc**, **.compodocrc.json**, **.compodocrc.yaml** 或者在 package.json中定义**compodoc**属性。
+你可以在项目根目录创建一个 **.compodocrc**, **.compodocrc.json**, **.compodocrc.yaml** 或者在 package.json中定义**compodoc**属性。
 
 ```
 {
@@ -90,6 +100,33 @@ https://compodoc.github.io/compodoc-demo-todomvc-angular/overview.html
 - `Routes` 路由树图。路由定义需指定类型为 `Routes` (从 `@angular/router` 导入)
 - `Miscellaneous` 其他杂项内容集合。根据这里的内容，可以分析分散的重复定义的内容，不合理的杂项定义等
 - `Documentation coverage` 文档覆盖率信息
+
+### 注释
+
+​	Compodoc支持JSDoc注释语法，注释会在模块、组建、指令等info页面生成description，同时支持为每个模块、组件、指令等单独编写markdown文件，生成在页面选项卡中。也可为整个项目添加外部markdown文件。需创建包含markdown文件的文件夹，并包含`summary.json`文件，使用`--includes`命令扩展文档。
+
+```
+summary.json
+
+[
+    {
+        "title": "A TITLE",
+        "file": "a-file.md"
+    },
+    {
+        "title": "A TITLE",
+        "file": "a-file.md",
+        "children": [
+            {
+                "title": "A TITLE",
+                "file": "a-sub-folder/a-file.md"
+            }
+        ]
+    }
+]
+```
+
+
 
 ### 主题
 

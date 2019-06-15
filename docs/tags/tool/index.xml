@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tool on KXMing</title>
+    <title>Tool on KXMing</title>
     <link>https://kxming.github.io/kxming/tags/tool/</link>
-    <description>Recent content in tool on KXMing</description>
+    <description>Recent content in Tool on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 30 May 2019 19:10:12 +0800</lastBuildDate>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 30 May 2019 19:10:12 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/2019/05/nrwl/</guid>
-      <description></description>
+      <description>&lt;p&gt;Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@
       <pubDate>Sun, 26 May 2019 23:23:53 +0800</pubDate>
       
       <guid>https://kxming.github.io/kxming/2019/05/compodoc/</guid>
-      <description>&lt;p&gt;Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。&lt;/p&gt;</description>
+      <description>&lt;p&gt;Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。&lt;/p&gt;</description>
     </item>
     
   </channel>

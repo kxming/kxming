@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
 <meta name="author" content="小明同学">
 <meta name="keywords" content="compodoc, js, es6, angular, vue, typescript, rxjs">
-<meta name="description" content="Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
+<meta name="description" content="Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
 
 
-<meta property="og:description" content="Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
+<meta property="og:description" content="Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Compodoc">
 <meta name="twitter:title" content="Compodoc">
 <meta property="og:url" content="https://kxming.github.io/kxming/2019/05/compodoc/">
 <meta property="twitter:url" content="https://kxming.github.io/kxming/2019/05/compodoc/">
 <meta property="og:site_name" content="KXMing">
-<meta property="og:description" content="Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
-<meta name="twitter:description" content="Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
+<meta property="og:description" content="Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
+<meta name="twitter:description" content="Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -266,7 +266,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p>
+              <p>Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p>
 
 <h3 id="示例">示例</h3>
 
@@ -292,6 +292,13 @@
 <h3 id="用法">用法</h3>
 
 <p><code>compodoc &lt;src&gt;  [option]</code></p>
+
+<p>示例：</p>
+
+<pre><code>&quot;scripts&quot;:{
+    &quot;compodoc&quot;: &quot;./node_modules/.bin/compodoc -p tsconfig.json -w -s --language=zh-CN&quot;
+}
+</code></pre>
 
 <p>下面列出常用的配置属性：</p>
 
@@ -365,7 +372,7 @@
 
 <h3 id="配置文件">配置文件</h3>
 
-<p>你可以在项目目录创建一个 <strong>.compodocrc</strong>, <strong>.compodocrc.json</strong>, <strong>.compodocrc.yaml</strong> 或者在 package.json中定义<strong>compodoc</strong>属性。</p>
+<p>你可以在项目根目录创建一个 <strong>.compodocrc</strong>, <strong>.compodocrc.json</strong>, <strong>.compodocrc.yaml</strong> 或者在 package.json中定义<strong>compodoc</strong>属性。</p>
 
 <pre><code>{
    ...
@@ -393,6 +400,30 @@
 <li><code>Miscellaneous</code> 其他杂项内容集合。根据这里的内容，可以分析分散的重复定义的内容，不合理的杂项定义等</li>
 <li><code>Documentation coverage</code> 文档覆盖率信息</li>
 </ul>
+
+<h3 id="注释">注释</h3>
+
+<p>​   Compodoc支持JSDoc注释语法，注释会在模块、组建、指令等info页面生成description，同时支持为每个模块、组件、指令等单独编写markdown文件，生成在页面选项卡中。也可为整个项目添加外部markdown文件。需创建包含markdown文件的文件夹，并包含<code>summary.json</code>文件，使用<code>--includes</code>命令扩展文档。</p>
+
+<pre><code>summary.json
+
+[
+    {
+        &quot;title&quot;: &quot;A TITLE&quot;,
+        &quot;file&quot;: &quot;a-file.md&quot;
+    },
+    {
+        &quot;title&quot;: &quot;A TITLE&quot;,
+        &quot;file&quot;: &quot;a-file.md&quot;,
+        &quot;children&quot;: [
+            {
+                &quot;title&quot;: &quot;A TITLE&quot;,
+                &quot;file&quot;: &quot;a-sub-folder/a-file.md&quot;
+            }
+        ]
+    }
+]
+</code></pre>
 
 <h3 id="主题">主题</h3>
 
@@ -750,7 +781,7 @@
                   May 5, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"></div>
+              <div class="media-content hide-xs font-merryweather"><p>Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
@@ -786,7 +817,7 @@
                   May 5, 2019
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
+              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
