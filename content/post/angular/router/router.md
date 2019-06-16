@@ -17,7 +17,7 @@ keywords:
 
 <!-- toc -->
 
-1. 在src/index.html的<head>标签下添加一个<base>元素，目的是告诉路由器该如何合成导航用的URL。如果在创建项目的时候指定使用`ng new myapp --routing`命令会自动在index.html生成该元素。
+1. 在src/index.html的`<head>`标签下添加一个`<base>`元素，目的是告诉路由器该如何合成导航用的URL。如果在创建项目的时候指定使用`ng new myapp --routing`命令会自动在index.html生成该元素。
 
 2. 简单配置
 
