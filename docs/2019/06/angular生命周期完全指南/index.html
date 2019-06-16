@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="小明同学">
+<meta name="keywords" content="translate, js, es6, angular, vue, typescript, rxjs">
+<meta name="description" content="原文链接： www.cuelogic.com">
+
+
+<meta property="og:description" content="原文链接： www.cuelogic.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular生命周期完全指南">
+<meta name="twitter:title" content="Angular生命周期完全指南">
+<meta property="og:url" content="https://kxming.github.io/kxming/2019/06/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/">
+<meta property="twitter:url" content="https://kxming.github.io/kxming/2019/06/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/">
+<meta property="og:site_name" content="KXMing">
+<meta property="og:description" content="原文链接： www.cuelogic.com">
+<meta name="twitter:description" content="原文链接： www.cuelogic.com">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-06-16T22:01:09">
+  
+  
+    <meta property="article:modified_time" content="2019-06-16T22:01:09">
+  
+  
+  
+    
+      <meta property="article:section" content="translate">
+    
+  
+  
+    
+      <meta property="article:tag" content="angular">
+    
+      <meta property="article:tag" content="lifecycle">
+    
+      <meta property="article:tag" content="translate">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=640">
+
+
+    <title>Angular生命周期完全指南</title>
+
+    <link rel="icon" href="https://kxming.github.io/kxming/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://kxming.github.io/kxming/2019/06/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://kxming.github.io/kxming/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://kxming.github.io/kxming/">KXMing</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://kxming.github.io/kxming/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://kxming.github.io/kxming/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">小明同学</h4>
+        
+          <h5 class="sidebar-profile-bio">前端开发</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">类别</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/kxming" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/kxming" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">领英</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-user"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Angular生命周期完全指南
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-06-16T22:01:09&#43;08:00">
+        
+  
+  
+  
+  
+    2019年6月16日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://kxming.github.io/kxming/categories/translate">translate</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>原文链接： <a href="https://www.cuelogic.com/blog/angular-lifecycle">www.cuelogic.com</a></p>
+
+<p><img src="https://p3.ssl.qhimg.com/t01a04e10fcd5ea4388.jpg" alt="" /> Angular是一个流行的、广泛使用的客户端平台框架，近年来赢得了数百万开发人员的青睐. 随着Angular的出现，web和移动应用的构建变得非常简单。每年都会有新版本出现，Angular的生命周期也在不断演变。</p>
+
+<blockquote>
+<p>Angular is a prevalent, broadly used client-side platform that has won millions of developer’s hearts in recent years. With the emergence of the Angular platform, application building has become extensively easy both for web and mobile. There are new versions emerging each year and Angular lifecycle keeps on evolving.</p>
+</blockquote>
+
+<p>该框架是由谷歌于2009年推出. <a href="https://angularjs.org/">Angular团队</a> 的第一个项目AngularJS非常受欢迎，依赖于HTML和JavaScript。然而，在后期的版本，你可能发现JavaScript已经被TypeScript和其他现代脚本语言所取代。</p>
+
+<blockquote>
+<p>The platform was introduced by Google back in 2009. AngularJS the first initiative by the <a href="https://angularjs.org/">Angular team</a> was extensively popular and was dependent on HTML and JavaScript. However, in the later versions, you can find that JavaScript got replaced by TypeScript and other modern scripting languages.</p>
+</blockquote>
+
+<p>Angular使开发人员更自由的开发运行在web端，移动端和桌面端的<a href="https://cuelogic.com/custom-software-development">应用程序</a>。随着时间的推移，Angular经历了许多修改，并在AngularJS之后引入了许多版本，直到Angular7，而且还在不断更新。</p>
+
+<blockquote>
+<p>Angular has given the developers the freedom to <a href="https://cuelogic.com/custom-software-development">develop applications</a> that can run on web, mobiles, and desktop. With time Angular has undergone many modifications and has introduced many versions after AngularJS to Angular7 and still counting.</p>
+</blockquote>
+
+<h1 id="什么是angular生命周期"><strong>什么是Angular生命周期?</strong></h1>
+
+<p>每个Angularjs版本在其生命周期中都会经历不同的阶段。组件在Angular中有决定性的作用。这里我将谈论angular组件生命周期 以及它们如何影响所有版本的生命周期，无论是第一个版本还是最后一个版本。为了开发过程的流畅性，Angular管理它的所有组件。 与任何自然生命周期一样，每个组件都有自己的生命周期事件，比如出生、生命事件和死亡。</p>
+
+<blockquote>
+<p>Each Angularjs version goes through various phases in its lifecycle. Components have a critical job in Angular; here I will talk about the component lifecycle of Angular and how they impact the lifecycle of all versions be it the first or the ultimate. For the smoothness in the development process, Angular manages all its components. Like any natural lifecycle, each component has its lifecycle events like – birth, life events, and death.</p>
+</blockquote>
+
+<p>值得注意的是，Angular本身监控着<a href="https://angular.io/guide/attribute-directives">Angular组件和指令</a>的所有生命周期， 您必须了解生命周期，并牢记其结果，才能使您的应用程序顺利进行。下面我将分享的信息适用与组件和指令。</p>
+
+<blockquote>
+<p>It is interesting to notice that Angular itself oversees all the lifecycle of <a href="https://angular.io/guide/attribute-directives">angular Components and Directives</a>, you have to understand the lifecycle with the result in mind to have the smooth progress of your application. The following information that I will share applies to both components and directives.</p>
+</blockquote>
+
+<p>组件是任何Angular版本的主要构建块。因此，理解它们，理解组件生命周期的处理步骤，变得极为重要，只有这样，它才能在应用程序的开发中实现。</p>
+
+<blockquote>
+<p>Components are the primary building block for any Angular version. So it becomes utmost important to understand them to understand the processing steps of the lifecycle of components, then only it can be implemented in the development of an application.</p>
+</blockquote>
+
+<p>在Angular中，你会注意到最令人兴奋的事情是，每个组件都有一个生命周期，生命周期的每个阶段都是从初始化到销毁。组件生命周期通常经历八个不同的阶段。</p>
+
+<blockquote>
+<p>The most exciting thing that you will notice in Angular is each, and every component in it has a lifecycle, and every stage of a lifecycle goes from initialization to destruction. A component lifecycle goes typically through eight different stages.</p>
+</blockquote>
+
+<p>当Angular组件被初始化的时候，它创建并显示其根组件。 然后设计并产生了它的子组件。对于在应用程序开发过程中加载的所有组件，它会一直检查数据绑定属性何时更改和更新。当组件不再使用时，它将接近死亡阶段，然后被抽取并从DOM中删除。有时，在发生这些事件时，您可能需要编写一些额外的代码。我试图最自然的展示组件的生命周期，现在让我们详细说明。</p>
+
+<blockquote>
+<p>When an Angular component gets initialized, it creates and presents its root components. Which then designed and produced its heirs. For all of the components that gets loaded during the development of the application, it keeps checking when the data binding properties are getting changed and updated. When the component is not utilized anymore, it approaches the death phase which is then decimated and is expelled from the DOM. Sometimes you may have to write some additional codes as these events take place. I have tried to present the most natural glimpse of lifecycle of component, now let us elaborate it.</p>
+</blockquote>
+
+<h2 id="生命周期钩子概览"><strong>生命周期钩子概览</strong></h2>
+
+<blockquote>
+<p><strong>Lifecycle hook overview</strong></p>
+</blockquote>
+
+<p>组件生命周期中的事件也称为“生命周期钩子”。您可能对术语生命周期钩子感到不舒服，但它只是开发人员可以在Angular应用程序中组件生命周期的特定时刻调用的简单函数。我们还可以说这些生命周期钩子是Angular在组件生命周期中发生肯定事件时引发的回调方法。在组件或指令的生命周期中有8种不同的钩子。</p>
+
+<blockquote>
+<p>The events in the life of a component are also referred to as “lifecycle hooks.” You may get uncomfortable with the term lifecycle hooks, but it is nothing but simple functions that a developer can call during a specific point of the life of a component in their Angular application. We can also state that these lifecycle hooks are callback method that Angular raises when a positive event happens in the lifecycle of a component. There are 8 distinct kinds of hooks in the lifecycle of a component or directive.</p>
+</blockquote>
+
+<p>你可以从Angular核心库中导入钩子函数，将一些独特的组件合并到应用程序的生命周期中。开发人员可以通过实现Angular核心库中的一个或多个钩子接口来抓住生命周期中的关键时刻。钩子事件可以包含在应用程序的任何阶段，以获得对组件更好的控制。</p>
+
+<blockquote>
+<p>You can execute hooks from the Angular core library as well to consolidate some unique components into the lifecycle of your application. Developers can knock on to the significant moments of a lifecycle by actualizing one or more hook interfaces from the Angular core library. Hook events can be included at any stages of an application to get excellent control over the components.</p>
+</blockquote>
+
+<p>例如：引入由Angular调用ngOnInit钩子函数的一个组件。</p>
+
+<blockquote>
+<p>For example: To introduce a component ngOnInit is summoned by Angular.</p>
+</blockquote>
+
+<ul>
+<li><p>在组件输入属性改变的时候，Angular将调用ngOnChange。</p></li>
+
+<li><blockquote>
+<p>For the changed input property of a component, ngOnChange is invoked by the Angular.</p>
+</blockquote></li>
+
+<li><p>在组件销毁的时候，Angular将调用ngOnDestroy。</p></li>
+
+<li><blockquote>
+<p>On the destruction of a component, ngOnDestroy is invoked by the Angular.</p>
+</blockquote></li>
+</ul>
+
+<p>组件是TypeScript类，这就是为什么必须将每个组件都视为构造方法的主要原因。在生命周期钩子事件中，首先执行组件类的构造函数。要将依赖项注入组件，必须使用构造函数。 Angular首先执行构造函数，然后显式执行所有其他生命周期钩子方法。</p>
+
+<blockquote>
+<p>The components are TypeScript Class; this is the primary motivation why you have to consider every component as constructor method. In the lifecycle hook event, the constructor of the component class gets first executed. For injecting dependency into the component, you must make use of the constructor. Angular executes the constructor first then only execution of all other lifecycle hook methods occurs explicitly.</p>
+</blockquote>
+
+<h2 id="constructor-vs-oninit"><strong>Constructor VS OnInit</strong></h2>
+
+<p>作为一名开发人员，您必须生成并引入组件。为此，您必须选择两个选项，要么使用构造函数，要么使用OnInit生命周期方法。随着组件的初始化，OnInit生命周期方法将被触发。</p>
+
+<blockquote>
+<p>Being a developer, it will be essential for you to generate your component and introduce it. For that you must settle on two options that are either you can utilize constructor or use OnInit lifecycle method. With the initialization of component, the OnInit lifecycle method gets triggered.</p>
+</blockquote>
+
+<p>使用哪种方法是由自己的决定，但是许多人认为他们更喜欢使用ngOnInit进行声明或初始化，并且尽量不使用构造函数。</p>
+
+<blockquote>
+<p>Which method you like to use is your decision, but many people have opined that they prefer to use ngOnInit for declaration or initialization and try not to use the constructors.</p>
+</blockquote>
+
+<h3 id="接口"><strong>接口</strong></h3>
+
+<blockquote>
+<h3 id="interfaces">Interfaces</h3>
+</blockquote>
+
+<p>接口是连接到生命周期方法的基本工具，因为应用程序的组件类需要实现基本接口。至于视图的引入，应该触发实现接口的方法是“AfterViewInit”，用于实现该接口的方法是“ngAfterViewInit”。</p>
+
+<blockquote>
+<p>The interface is a fundamental instrument to hook into the lifecycle method, as the component class of your application needs to implement the essential interface. As for the introduction of view, the method that should be triggered to implement the interface is “AfterViewInit,” and the method for this is ” ngAfterViewInit.”</p>
+</blockquote>
+
+<h3 id="ngonchanges"><strong>ngOnchanges</strong></h3>
+
+<p>当组件的数据绑定属性发生变化时，或者简单地说，当组件内的输入控件得到更新时，就会执行这个回调函数。Angular接收一个更改后的数据映射，该数据映射包含数据绑定属性的当前和以前的位置，并封装在一个简单的更改中。</p>
+
+<blockquote>
+<p>This callback function is sought after when the data-bound property variations happen for a component or in simple words, we can say this event gets executed as and when the input control gets renewed inside the component. A changed data map is received by the Angular containing the present and previous position of the data-bound property encased in a simple change.</p>
+</blockquote>
+
+<p>如果子组件使用了公开的属性装饰器@Input，则使用这个生命周期钩子，父组件可以轻松地与其子组件通信。即使父元素偏离了输入属性，这个钩子也会在子组件中被调用。开发人员使用这个钩子来发现有关已更改的输入属性的详细信息，以及它是如何更改的。</p>
+
+<blockquote>
+<p>Using this lifecycle hook a Parent component can easily communicate with its child component if the property decorator exposes @InputDecorator of the child component. Even if the parent deviations the input property this hook gets summoned in the child component. Developers use this hook to discover the details about the input property that has been changed and how it got changed.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>实际上，它可用于所有具有输入的组件。</p></li>
+
+<li><blockquote>
+<p>It can be utilized practically in all the components that have input.</p>
+</blockquote></li>
+
+<li><p>每当输入值更改时调用。</p></li>
+
+<li><blockquote>
+<p>Gets invoked whenever the input value gets changed.</p>
+</blockquote></li>
+
+<li><p>它在ngOnInit之前调用。</p></li>
+
+<li><blockquote>
+<p>It gets the initial call to get raised before ngOnInit.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngoninit"><strong>ngOnInit</strong></h3>
+
+<p>当Angular完成组件的创建和引入时，这个回调函数也会被初始化为Angular显示数据绑定属性。此事件仅在ngOnChanges事件之后和构造函数之后获得其调用。使用这个钩子，您可以初始化组件的逻辑。如前所述，这个钩子在ngOnChanges之后获得初始化，这意味着ngOnInit的所有属性都可以使用它的所有属性。在此钩子被触发之前，不能使用子指令的任何属性。</p>
+
+<blockquote>
+<p>When Angular has completed the creation and introduction of components this callback is invoked, it also gets initialized as Angular displays data-bound properties. This event gets its call only after ngOnChanges event and after the constructor. With this hook, you can initialize logic to your component. As it is already said, this hook gets initialization after ngOnChanges that means all the properties ngOnInit can use all its properties. Any of the child directive properties cannot be used before this hack gets triggered.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>这个钩子初始化组件数据。</p></li>
+
+<li><blockquote>
+<p>This hook initializes data for a component.</p>
+</blockquote></li>
+
+<li><p>在设置输入值之后，这个钩子被调用。</p></li>
+
+<li><blockquote>
+<p>After setting the input values, this hook gets its call.</p>
+</blockquote></li>
+
+<li><p>默认情况下，Angular CLI会将这个钩子添加到所有组件中。</p></li>
+
+<li><blockquote>
+<p>This hook is added by default by Angular CLI to all the components.</p>
+</blockquote></li>
+
+<li><p>它仅调用一次。</p></li>
+
+<li><blockquote>
+<p>It is called only for once.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngdocheck"><strong>ngDoCheck</strong></h3>
+
+<p>每当Angular 自身无法捕获组件或指令的变更输入属性时，就需要使用这个钩子函数。你甚至可以使用这个回调来进行逻辑检查。简而言之，通过这个钩子，您可以实现在组件中的自定义检查逻辑。</p>
+
+<blockquote>
+<p>This is most sought after hook whenever there is a vitality to review the input property of a component or directive. You can even use this call back for your logic check. In short, through this hook, you can do custom check for your logic that you want to implement in the component.</p>
+</blockquote>
+
+<p>这个钩子在ngOnInit之后立即随需应变，即使组件的属性没有变化，这个钩子也有它的执行职责。如果Angular错误地检测输入属性中的任何变化，就会出现这个钩子来拯救它。</p>
+
+<blockquote>
+<p>This hook comes on demand instantly after ngOnInit, and this hook has its duty of execution even if there is no change in the property of a component. This hook arises to rescue if Angular miscarries to detect any change in the input property.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>由Angular运行以检测任何更改。</p></li>
+
+<li><blockquote>
+<p>Run by Angular to detect any changes.</p>
+</blockquote></li>
+
+<li><p>用来进行变化检测。</p></li>
+
+<li><blockquote>
+<p>Called for change detection.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngaftercontentinit">ngAfterContentInit</h3>
+
+<p>当第一次引入和检查组件的每个内容时，ngAfterContentInit将在ngDoCheck之后调用。只要Angular在组件视图中做了任何内容投影，就会实现这个方法。当属性被明确划分为ContentChild和ContentChildren并被完全初始化时，也会调用此方法。</p>
+
+<blockquote>
+<p>ngAfterContentInit becomes a demand next to ngDoCheck when every content of the components gets introduced and checked for the first time. This method is implemented as soon as Angular makes any content projection within a component view. This method is also called when the properties get clearly demarcated as ContentChild and ContentChildren and are fully initialized.</p>
+</blockquote>
+
+<p>Angular可以在标签中使用这种方法包含外部子组件。在组件的整个生命周期中，这个钩子只获得一次调用。</p>
+
+<blockquote>
+<p>External child components can be included by Angular using this method within the tag. In the total lifecycle of a component, this hook gets call only for once.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>在最初调用ngDoCheck之后。</p></li>
+
+<li><blockquote>
+<p>After ngDoCheck it is called initially.</p>
+</blockquote></li>
+
+<li><p>它被用来初始化内容。</p></li>
+
+<li><blockquote>
+<p>It does its work by initializing the content.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngaftercontentchecked">ngAfterContentChecked</h3>
+
+<p>这个钩子方法通过使用Angular变化检测机制来检查组件内容的修改，即使没有任何修改，它仍然会被执行。它在ngAftercontentInit之后获得调用，并且在每次执行ngDoCheck之后执行。它在子组件的初始化过程中扮演着重要的角色。</p>
+
+<blockquote>
+<p>This hook method accomplishes its work by investigating the modification in the content of the component using Angular change detection apparatus, and it still performs its task even if there is not at all any modification. It gets its call after ngAftercontentInit and also gets executed after every execution od ngDoCheck. It plays a big role in the initialization of the child component.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>这个方法等待ngContentInit完成后才开始执行。</p></li>
+
+<li><blockquote>
+<p>This method waits for ngContentInit to finish its execution to get started.</p>
+</blockquote></li>
+
+<li><p>在所有ngDocheck之后执行。</p></li>
+
+<li><blockquote>
+<p>Executed after all ngDocheck.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngafterviewinit">ngAfterViewInit</h3>
+
+<p>这个生命周期方法在ngAfterContentChecked之后调用，并仅在组件上查找它。这与ngAfterContentInit非常相似，它只在所有组件视图及其子视图之后调用。</p>
+
+<blockquote>
+<p>This lifecycle method gets its call after ngAfterContentChecked and finds its use only on components. This is very much similar to ngAfterContentInit, and it gets invoked only after all the component view and its child view.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>在视图初始化之后，它只调用一次。</p></li>
+
+<li><blockquote>
+<p>After the initialization of view, it gets its call only for once.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngafterviewchecked">ngAfterViewChecked</h3>
+
+<p>这个Angular生命周期方法在检查组件视图和子视图时被触发。这个方法在ngAfterViewInit之后调用，并且为每个ngAfterContentChecked方法调用。和上面讨论的许多其他生命周期钩子一样，它也只适用于组件。</p>
+
+<blockquote>
+<p>This Angular lifecycle method gets triggered subsequently as it checks component’s view and child view. This method gets its call after ngAfterViewInit and then for every ngAfterContentChecked method. Like many other lifecycle hooks discussed above it is also applicable for components only.</p>
+</blockquote>
+
+<p>当等待子组件的某些东西时，这个组件可能会有帮助。</p>
+
+<blockquote>
+<p>When something is awaited from the child component, this component can be helpful.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>检查和初始化完成后，将调用它。</p></li>
+
+<li><blockquote>
+<p>After the checking and initialization are done, this gets its called.</p>
+</blockquote></li>
+
+<li><p>在每个ngAfterContentChecked方法完成后，这个方法就开始执行。</p></li>
+
+<li><blockquote>
+<p>After every ngAfterContentChecked method finishes its job, this method starts its work.</p>
+</blockquote></li>
+</ul>
+
+<h3 id="ngondestroy">ngOnDestroy</h3>
+
+<p>这个生命周期钩子在Angular销毁所有组件或指令之后调用。在这里使用清理逻辑，取消所有可观察对象的订阅，并分离事件处理程序，这样做可以防止内存泄漏。</p>
+
+<blockquote>
+<p>This lifecycle hook gets its call after Angular destroys all the components or directives. This is the place where you can use your clean up logic and unsubscribe from all observable and detach from event handlers, by doing so you can prevent memory leakage.</p>
+</blockquote>
+
+<p><strong>属性：</strong></p>
+
+<blockquote>
+<p><strong>Properties:</strong></p>
+</blockquote>
+
+<ul>
+<li><p>在从DOM中删除组件之前调用。</p></li>
+
+<li><blockquote>
+<p>Gets its call just before components get removed from DOM.</p>
+</blockquote></li>
+</ul>
+
+<h2 id="如何使用angular生命周期钩子"><strong>如何使用Angular生命周期钩子?</strong></h2>
+
+<blockquote>
+<h6 id="how-can-you-make-use-of-angular-lifecycle-hooks">How can you make use of Angular lifecycle hooks?</h6>
+</blockquote>
+
+<p>你应该做的事情如下:</p>
+
+<blockquote>
+<p>The things that you should follow are as under:</p>
+</blockquote>
+
+<ul>
+<li><p>首先，必须导入钩子接口。</p></li>
+
+<li><blockquote>
+<p>First, you have to import the hook interface.</p>
+</blockquote></li>
+
+<li><p>在钩子接口中，应该声明组件或指令。</p></li>
+
+<li><blockquote>
+<p>In the hook interface, you ought to announce the component or directive.</p>
+</blockquote></li>
+
+<li><p>接下来，您应该生成钩子方法。</p></li>
+
+<li><blockquote>
+<p>Next, you ought to generate the hook method.</p>
+</blockquote></li>
+</ul>
+
+<p>导入钩子接口是最佳策略。</p>
+
+<blockquote>
+<p>The best strategy to import hook interfaces</p>
+</blockquote>
+
+<p>从核心模块导入钩子接口是必不可少的。不需要在名称前添加前缀。</p>
+
+<blockquote>
+<p>Here the importing hook interface from the core module is essential. Adding prefix before the name is not required.</p>
+</blockquote>
+
+<pre><code>export class SpyDirective implements OnInit, OnDestroy { ….}; @angular/core’;
+</code></pre>
+
+<p>这段代码取自 <a href="https://angular.io/guide/lifecycle-hooks">https://angular.io/guide/lifecycle-hooks</a></p>
+
+<blockquote>
+<p><em>The code is taken from <a href="https://angular.io/guide/lifecycle-hooks">https://angular.io/guide/lifecycle-hooks</a></em></p>
+</blockquote>
+
+<p>组件实现生命周期钩子的声明：</p>
+
+<blockquote>
+<p>Statement of the component that actualizes lifecycle hooks :</p>
+</blockquote>
+
+<p>在接下来的阶段中，您需要执行实现OnInit接口的组件。它的代码结构如下所示。</p>
+
+<blockquote>
+<p>In the subsequent stages, you need to characterize the App component that executes the OnInit interface. The code structure for that is given below.</p>
+</blockquote>
+
+<pre><code>//export class AppComponent { ,
+</code></pre>
+
+<p>语法取自 <a href="http://c-sharpcorner.com/">c-sharpcorner.com</a></p>
+
+<blockquote>
+<p><em>syntax taken from c-sharpcorner.com</em></p>
+</blockquote>
+
+<h2 id="创建钩子方法"><strong>创建钩子方法</strong></h2>
+
+<blockquote>
+<h6 id="generating-the-hook-methods">Generating the hook methods</h6>
+</blockquote>
+
+<p>必须记住的一件事是“钩子”和“钩子方法”有相似的名称。</p>
+
+<blockquote>
+<p>One thing that you should remember is the “hook” and “hook method” must have the similar name.</p>
+</blockquote>
+
+<p>就在组件生成的时候，钩子以下面描述的关联方式实现</p>
+
+<blockquote>
+<p>Right at the point when the components are made the hooks are implemented in the associated way depicted under</p>
+</blockquote>
+
+<p><img src="https://p4.ssl.qhimg.com/t01e1b34385c09dccd0.jpg" alt="" /></p>
+
+<p>但是，当创建带有子组件的组件时，会执行一些扩展。</p>
+
+<blockquote>
+<p>However, the arrangement of execution gets some expansion in it when components with the child are created.</p>
+</blockquote>
+
+<p><img src="https://p3.ssl.qhimg.com/t015ce0a1fa0cfe4798.jpg" alt="" /></p>
+
+<p>对于子组件，我们需要运行</p>
+
+<blockquote>
+<p>Now for child component again we have to run</p>
+</blockquote>
+
+<p><img src="https://p4.ssl.qhimg.com/t01e1b34385c09dccd0.jpg" alt="Generating Hook Methods_1" /></p>
+
+<p>这里，在ViewInit之后加入父类。</p>
+
+<blockquote>
+<p>Here again, joins the parent After ViewInit.</p>
+</blockquote>
+
+<h2 id="结论"><strong>结论</strong></h2>
+
+<blockquote>
+<p><strong>Conclusion</strong></p>
+</blockquote>
+
+<p>在上面的文章中，我讨论了生命周期钩子及其在组件或指令的生命周期中发生的顺序。应该记住的一件事是，这些生命周期钩子同时适用于组件和指令。</p>
+
+<blockquote>
+<p>In the above article, I have discussed the lifecycle hooks and their sequence in which they occur in the lifecycle of a component or a directive. One thing you should remember is these lifecycle hooks apply to both components and directives.</p>
+</blockquote>
+
+<p>作为一名开发人员，您必须知道组件在Angular中有多么重要，因此了解这些生命周期钩子同样非常重要。阅读本文之后，您已经了解了钩子以及它们在<a href="https://cuelogic.com/angularjs-development">AngularJS开发</a>的生命周期中扮演的角色。您应该谨慎使用这些钩子，因为您的项目可能不需要所有的钩子，所以选择您需要的钩子。</p>
+
+<blockquote>
+<p>Being a developer you must know how much importance the component holds in Angular, so knowing about these lifecycle hooks is equally very important. After reading this article, you have gained the knowledge about the hooks and what role they play in the lifecycle of an <a href="https://cuelogic.com/angularjs-development">AngularJS development</a>. You should be cautious of using these hooks as all the hooks may not be needed for your project, so choose those which are necessary for you.</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://kxming.github.io/kxming/tags/angular/">angular</a>
+
+  <a class="tag tag--primary tag--small" href="https://kxming.github.io/kxming/tags/lifecycle/">lifecycle</a>
+
+  <a class="tag tag--primary tag--small" href="https://kxming.github.io/kxming/tags/translate/">translate</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://kxming.github.io/kxming/2019/06/library/" data-tooltip="Library">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                  
+  <span id="/2019/06/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/" style="width: 100%;height:3.3em;display:flex;color:#858585;font-size:12px;" class="leancloud_visitors" data-flag-title="Angular生命周期完全指南">
+    <span class="post-meta-item-text">访问量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'H6c7eYs09whlPN5D8K8SJSuH-gzGzoHsz',
+        appKey: 'QYdh14ieOz86zRUVIkOY7xd7',
+        notify: 'false',
+        verify: '',
+        avatar: 'mm',
+        placeholder: '说点什么吧...',
+        visitor: 'true'
+    });
+  </script>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <div id="sitetime"></div>
+  <span class="copyrights">
+    &copy; 2019 小明同学. All Rights Reserved
+  </span>
+</footer>
+<script language=javascript>
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    
+
+    var t1 = Date.UTC(2019,05,25,15,00,00); 
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  } 
+  siteTime();
+</script>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://kxming.github.io/kxming/2019/06/library/" data-tooltip="Library">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">小明同学</h4>
+    
+      <div id="about-card-bio">前端开发</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        深圳
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/">
+                <h3 class="media-heading">Angular生命周期完全指南</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>原文链接： <a href="https://www.cuelogic.com/blog/angular-lifecycle">www.cuelogic.com</a></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/library/">
+                <h3 class="media-heading">Library</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Angular Library</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Form使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x表单。Angular表单是一个可选的服务，在它自己的<code>@angular/forms</code>包中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Animate使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x动画模块。Angular动画是一个可选的服务，在它自己的<code>@angular/animations</code>包 和 <code>@angular/platform-browser</code>中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Router使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x使用路由服务在页面之间导航。Angular路由器是一个可选的服务，在它自己的<code>@angular/router</code>包中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/nrwl/">
+                <h3 class="media-heading">Nrwl</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/storybook/">
+                <h3 class="media-heading">Storybook</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。</p>
+
+<p>Storybook支持Angular、React、Vue、ReactNative等组件。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/compodoc/">
+                <h3 class="media-heading">Compodoc</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/hugo%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/">
+                <h3 class="media-heading">Hugo创建个人博客指南</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本博客使用<a href="https://gohugo.io/">Hugo</a>静态页面生成引擎，使用的主题是<a href="https://tranquilpeak.kakawait.com/">tranquilpeak</a>，使用的评论系统为<a href="https://valine.js.org/">Valine</a>。写这篇文章的目的是详细介绍个人博客创建指南。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/component/">
+                <h3 class="media-heading">Component</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather">组件控制屏幕上被称为视图的一小片区域。比如，教程中的下列视图都是由一个个组件所定义和控制的：
+带有导航链接的应用根组件。
+英雄列表。
+英雄编辑器。</div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         10 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://kxming.github.io/kxming/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://kxming.github.io/kxming/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/kxming.github.io\/kxming\/2019\/06\/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97\/';
+          
+            this.page.identifier = '\/2019\/06\/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'valine';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
