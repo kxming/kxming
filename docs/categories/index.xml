@@ -6,10 +6,28 @@
     <description>Recent content in Categories on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jun 2019 22:01:09 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2019 19:41:07 +0800</lastBuildDate>
     
 	<atom:link href="https://kxming.github.io/kxming/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>category</title>
+      <link>https://kxming.github.io/kxming/categories/category/</link>
+      <pubDate>Mon, 12 Aug 2019 19:41:07 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/categories/category/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subcategory</title>
+      <link>https://kxming.github.io/kxming/categories/subcategory/</link>
+      <pubDate>Mon, 12 Aug 2019 19:41:07 +0800</pubDate>
+      
+      <guid>https://kxming.github.io/kxming/categories/subcategory/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>translate</title>
@@ -21,7 +39,7 @@
     </item>
     
     <item>
-      <title>angular</title>
+      <title>Angular</title>
       <link>https://kxming.github.io/kxming/categories/angular/</link>
       <pubDate>Tue, 11 Jun 2019 19:22:16 +0800</pubDate>
       
