@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.3-SNAPSHOT">
+<meta name="author" content="小明同学">
+<meta name="keywords" content="git, commit, js, es6, angular, vue, typescript, rxjs">
+<meta name="description" content="">
+
+
+<meta property="og:description" content="">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码提交规范">
+<meta name="twitter:title" content="代码提交规范">
+<meta property="og:url" content="https://kxming.github.io/kxming/2019/08/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/">
+<meta property="twitter:url" content="https://kxming.github.io/kxming/2019/08/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/">
+<meta property="og:site_name" content="KXMing">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-08-13T19:48:32">
+  
+  
+    <meta property="article:modified_time" content="2019-08-13T19:48:32">
+  
+  
+  
+    
+      <meta property="article:section" content="git">
+    
+      <meta property="article:section" content="commit">
+    
+  
+  
+    
+      <meta property="article:tag" content="git">
+    
+      <meta property="article:tag" content="commit">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=640">
+
+
+    <title>代码提交规范</title>
+
+    <link rel="icon" href="https://kxming.github.io/kxming/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://kxming.github.io/kxming/2019/08/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://kxming.github.io/kxming/css/style-nnm2spxvve8onlujjlegkkytaehyadd4ksxc1hyzzq9a2wvtrgbljqyulomn.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://kxming.github.io/kxming/">KXMing</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://kxming.github.io/kxming/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://kxming.github.io/kxming/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">小明同学</h4>
+        
+          <h5 class="sidebar-profile-bio">前端开发</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">类别</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/kxming" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://www.linkedin.com/in/kxming" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+      
+      <span class="sidebar-button-desc">领英</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-user"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://kxming.github.io/kxming/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="5"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      代码提交规范
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-08-13T19:48:32&#43;08:00">
+        
+  
+  
+  
+  
+    2019年8月13日
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://kxming.github.io/kxming/categories/git">git</a>, 
+    
+      <a class="category-link" href="https://kxming.github.io/kxming/categories/commit">commit</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <div data-v-cc1b3b7a="" data-id="5c862170f265da2d8d6a13ad" itemprop="articleBody" class="article-content"><p>本文的目的是为了给想要快速搭建一套业内流行的<code>angular</code>团队<strong>代码提交规范</strong>（不是<code>angular</code>团队编写代码的规范）的小伙伴们提供一个简单清晰直白的教程。文章的内容不会深究每个环节的细节，但是会用通俗的话语让需要的小伙伴们了解每个环节的含义和作用，从而能做到从0到1的搭建起代码提交的工作流。</p>
+<h2 class="heading" data-id="heading-0">1. 格式化 commit message</h2>
+<p><code>commit message</code>的重要性我就不在这强调了，我们常规提交代码都是通过<code>git commit -m "xxx"</code>附上一句话来描述此次代码的改动，这样的方式对于一些影响范围大或者broken式的改动来说太过于简单随意。每个人都有自己习惯的提交代码方式，所以我们需要借助一个工具来生成符合规范的<code>commit message</code>并约束提交的人。</p>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fcommitizen%2Fcz-cli" rel="nofollow noopener noreferrer">commitizen</a>是一个格式化<code>commit message</code>的工具，可以约束提交者按照制定的规范一步一步的填写<code>commit message</code>。</p>
+<h3 class="heading" data-id="heading-1">局部安装</h3>
+<p><code>npm i -D commitizen</code></p>
+<h3 class="heading" data-id="heading-2">配置：</h3>
+<p><code>package.json</code>中写入：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"script"</span>: {
+    ...,
+    <span class="hljs-string">"commit"</span>: <span class="hljs-string">"git-cz"</span>,
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>这样我们就可以借助<code>commitizen</code>提供的<code>git-cz</code>，用<code>npm run commit</code>命令来替代<code>git commit</code>命令。</p>
+<h2 class="heading" data-id="heading-3">2. 采用 angular 团队代码提交规范</h2>
+<p>我们已经把可以生成指定<code>commit message</code>的工具<code>commitizen</code>安装好了，接下来要做的就是为<code>commitizen</code>制定一套填写规范。</p>
+<p><a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fcommitizen%2Fcz-conventional-changelog" rel="nofollow noopener noreferrer">cz-conventional-changelog</a> is a commitizen adapter for the angular preset of conventional-changelog （一套适用于<code>commitizen</code>的<code>angular</code>团队规范）。目前采用比较广泛，那我们就直接给<code>commitizen</code>引用这套规范了。</p>
+<h3 class="heading" data-id="heading-4">局部安装</h3>
+<p><code>npm i -D cz-conventional-changelog</code></p>
+<h3 class="heading" data-id="heading-5">配置：</h3>
+<p><code>package.json</code>中写入：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"config"</span>: {
+    <span class="hljs-string">"commitizen"</span>: {
+        <span class="hljs-string">"path"</span>: <span class="hljs-string">"node_modules/cz-conventional-changelog"</span>
+    }
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>安装配置好以后，执行<code>npm run commit</code>就会出现如下引导式填写：</p>
+<p></p><figure><img class="lazyload inited loaded" src="https://kxming.github.io/kxming/git/commit.jpg" data-width="718" data-height="293" src="https://user-gold-cdn.xitu.io/2019/3/11/1696b8d42fe7b57a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure>
+<figure><img class="lazyload inited loaded" src="https://kxming.github.io/kxming/git/commit1.jpg" data-width="683" data-height="186" src="https://user-gold-cdn.xitu.io/2019/3/11/1696b8d7fc2b2b89?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"><figcaption></figcaption></figure><p></p>
+<h2 class="heading" data-id="heading-6">3. 校验 commit message</h2>
+<p>虽然之前两步已经约束了一套代码提交规范，但是还是有人不按照规范提交代码怎么办呢？这个时候就需要<a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fcommitlint" rel="nofollow noopener noreferrer">commitlint</a>来帮助我们校验<code>commit message</code>，拒绝不符合规范的<code>commit message</code>。</p>
+<p>与<code>eslint</code>类似，<code>commitlint</code>也需要一份校验的配置。别着急，这里有一份与<code>cz-conventional-changelog</code>规范（<code>angular</code>团队规范）配套的校验配置<a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fcommitlint%2Ftree%2Fmaster%2F%2540commitlint%2Fconfig-conventional" rel="nofollow noopener noreferrer">@commitlint/config-conventional</a>来帮助我们检验<code>commit message</code>的合规性。</p>
+<h3 class="heading" data-id="heading-7">局部安装</h3>
+<p><code>npm i -D @commitlint/config-conventional @commitlint/cli</code></p>
+<h3 class="heading" data-id="heading-8">配置</h3>
+<p>安装完成以后，同时需要在项目根目录下创建配置文件<code>commit.config.js</code>或者<code>.commitlintrc.js</code>并写入：</p>
+<pre><code class="hljs bash copyable" lang="bash">module.exports = { 
+    extends: [
+        <span class="hljs-string">'@commitlint/config-conventional'</span>
+    ]
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>或者在<code>package.json</code>中写入：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"commitlint"</span>: {
+    <span class="hljs-string">"extends"</span>: [
+        <span class="hljs-string">"@commitlint/config-conventional"</span>
+    ]
+  },
+<span class="copy-code-btn">复制代码</span></code></pre><p><code>commitlint</code>就可以运用<code>config-conventional</code>这套校验配置。</p>
+<h2 class="heading" data-id="heading-9">4. 配置校验时机</h2>
+<p>到了第三步我们的代码提交约束规范已经基本成型了，最后一步要做的就是配置触发<code>commit message</code>校验的时机。</p>
+<p>校验<code>commit message</code>的最佳姿势是<a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgit-scm.com%2Fbook%2Fen%2Fv2%2FCustomizing-Git-Git-Hooks" rel="nofollow noopener noreferrer">git hook</a>和<a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Ftypicode%2Fhusky" rel="nofollow noopener noreferrer">husky</a>的结合。</p>
+<p><code>husky</code>（哈士奇）是个什么东西呢？简单来说就是个能让你在每个git钩子中配置相应行为的一个工具。</p>
+<h3 class="heading" data-id="heading-10">局部安装</h3>
+<p><code>npm install husky --save-dev</code></p>
+<h3 class="heading" data-id="heading-11">配置</h3>
+<p>安装完成以后，同时需要在项目根目录下创建配置文件<code>.huskyrc</code>或者<code>.huskyrc.js</code>文件并写入：</p>
+<pre><code class="hljs bash copyable" lang="bash">{
+    <span class="hljs-string">"husky"</span>: {
+        <span class="hljs-string">"hooks"</span>: {
+            ...,
+            <span class="hljs-string">"commit-msg"</span>: <span class="hljs-string">"commitlint -e <span class="hljs-variable">$GIT_PARAMS</span>"</span>
+        }
+    }
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>或者在<code>package.json</code>中写入：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"husky"</span>: {
+    <span class="hljs-string">"hooks"</span>: {
+        ...,
+        <span class="hljs-string">"commit-msg"</span>: <span class="hljs-string">"commitlint -e <span class="hljs-variable">$GIT_PARAMS</span>"</span>
+    }
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>在<code>git commit-msg</code>这个钩子中会触发<code>commitlint</code>的操作。</p>
+<h2 class="heading" data-id="heading-12">5. 自动化代码检查</h2>
+<p>经过前三步已经打造好了基于<code>angular</code>团队代码提交规范的工作流了，但是如果我们还想在校验<code>commit message</code>的规范性的同时，校验此次提交代码的正确性呢？</p>
+<p>借助 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fokonet%2Flint-staged" rel="nofollow noopener noreferrer">lint-staged</a> 可以让你每次只对你此次提交所在暂存区的文件（<code>git add</code>后的文件）进行一系列的检查、修复、格式化操等作。</p>
+<h3 class="heading" data-id="heading-13">局部安装</h3>
+<p><code>npm install -D lint-staged</code></p>
+<h3 class="heading" data-id="heading-14">配置</h3>
+<p>安装完成以后，同时需要在项目根目录下创建配置文件<code>.lintstagedrc</code>并写入：</p>
+<pre><code class="hljs bash copyable" lang="bash">{
+  <span class="hljs-string">"*.{js,vue}"</span>: [
+    <span class="hljs-string">"eslint --fix"</span>,
+    <span class="hljs-string">"git add"</span>
+  ],
+  <span class="hljs-string">"*.{html,vue,css,sass,scss}"</span>: [
+    <span class="hljs-string">"stylelint --fix"</span>,
+    <span class="hljs-string">"git add"</span>
+  ]
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>或者在<code>package.json</code>中写入：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"lint-staged"</span>: {
+    <span class="hljs-string">"*.{js,vue}"</span>: [
+    <span class="hljs-string">"eslint --fix"</span>,
+    <span class="hljs-string">"git add"</span>
+  ],
+  <span class="hljs-string">"*.{html,vue,css,sass,scss}"</span>: [
+    <span class="hljs-string">"stylelint --fix"</span>,
+    <span class="hljs-string">"git add"</span>
+  ]
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>在第三步创建的<code>husky</code>配置文件进行补充：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"husky"</span>: {
+    <span class="hljs-string">"hooks"</span>: {
+        <span class="hljs-string">"pre-commit"</span>: <span class="hljs-string">"lint-staged"</span>,
+        <span class="hljs-string">"commit-msg"</span>: <span class="hljs-string">"commitlint -e <span class="hljs-variable">$GIT_PARAMS</span>"</span>
+    }
+}
+<span class="copy-code-btn">复制代码</span></code></pre><p>在<code>pre-commit</code>这个钩子中，<code>lint-staged</code>会执行<code>.lintstagedrc</code>配置的操作（列出来的配置的意思是对本次提交的<code>js</code>或者<code>vue</code>文件进行<code>eslint</code>检查并修复，并且把修复过后的文件再重新提交到暂存区）。</p>
+<h2 class="heading" data-id="heading-15">6. 版本发布</h2>
+<p>对于每次项目新版本的发布，我们需要更新相应的版本号并记录其中的改变。可以借助 <a target="_blank" href="https://link.juejin.im?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fstandard-version" rel="nofollow noopener noreferrer">standard-version</a> 工具，来替代<code>npm run version</code>，并自动生成<code>CHANGELOG</code>。</p>
+<h3 class="heading" data-id="heading-16">局部安装</h3>
+<pre><code class="hljs bash copyable" lang="bash">npm install standard-version --save-dev
+<span class="copy-code-btn">复制代码</span></code></pre><h3 class="heading" data-id="heading-17">配置</h3>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"release"</span>: <span class="hljs-string">"standard-version"</span>,
+    ...
+ }
+<span class="copy-code-btn">复制代码</span></code></pre><p>执行<code>npm run release</code>指令实际执行了五个动作：</p>
+<ol>
+<li>修改<code>package.json</code>中的版本号</li>
+<li>修改<code>package-lock.json</code>中的版本号</li>
+<li>生成<code>CHANGELOG.md</code>文件</li>
+<li>提交<code>package.json</code>、<code>package-lock.json</code>、<code>CHANGELOG.md</code>文件</li>
+<li>给这次提交记录打上<code>tag</code></li>
+</ol>
+<p></p><figure><img class="lazyload inited" src="https://kxming.github.io/kxming/git/commit3.jpg" data-width="531" data-height="360" src="data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;531&quot; height=&quot;360&quot;></svg>"><figcaption></figcaption></figure><p></p>
+<p>如果发布的是首个版本，则可以运行如下指令：</p>
+<pre><code class="hljs bash copyable" lang="bash">npm run release -- --firse-release
+<span class="copy-code-btn">复制代码</span></code></pre><p>如果需要发布预发布版本，则可以使用<code>--prerelease/-p</code>标志来添加预发布版本号：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-comment"># 当前版本为 1.0.0</span>
+npm run release -- --prerelease  <span class="hljs-comment"># 版本为 1.0.1-0</span>
+npm run release -- --prerelease beta  <span class="hljs-comment"># 版本为 1.0.1-beta.1</span>
+<span class="copy-code-btn">复制代码</span></code></pre><p>如果是正常的版本迭代，则可以使用<code>--release-as/-r</code>标志来指定版本：</p>
+<pre><code class="hljs bash copyable" lang="bash"><span class="hljs-comment"># 当前版本为 1.0.0</span>
+npm run release -- --release-as patch  <span class="hljs-comment"># 版本为 1.0.1，npm run release默认行为</span>
+npm run release -- --release-as minor  <span class="hljs-comment"># 版本为 1.1.0</span>
+npm run release -- --release-as major  <span class="hljs-comment"># 版本为 2.0.0</span>
+npm run release -- --release-as 2.0.1  <span class="hljs-comment"># 版本为 2.0.1</span>
+npm run release -- --release-as 2.0.1-alpha.0  <span class="hljs-comment"># 版本为 2.0.1-alpha.0</span>
+<span class="copy-code-btn">复制代码</span></code></pre><blockquote>
+<p>一般项目要上线新版本的时候，需要把<code>release</code>分支合到<code>master</code>，合完分支以后执行<code>npm run release</code>指令给这次发布打上<code>tag</code>并记录修改是一个良好的维护版本迭代的好习惯。</p>
+</blockquote>
+<h2 class="heading" data-id="heading-18">最后</h2>
+<p>一个完整的基于<code>angular</code>团队代码提交规范的工作流已经打造完成，如果有不适应<code>angular</code>这套规范的话也可以自定义一套规范，这里就不再赘述了。当然，有的小伙伴觉得这么写<code>commit</code>很麻烦，但是一个好的提交规范习惯有助于整个团队在项目中高效率的开发，所以赶紧在自己项目中用起来吧！</p>
+</div>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://kxming.github.io/kxming/tags/git/">git</a>
+
+  <a class="tag tag--primary tag--small" href="https://kxming.github.io/kxming/tags/commit/">commit</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://kxming.github.io/kxming/2019/08/%E4%B8%87%E5%AD%97%E9%95%BF%E6%96%87%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90graphql%E6%90%BA%E7%A8%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%96%B9%E6%A1%88/" data-tooltip="万字长文全面解析GraphQL，携程微服务背景下的前后端数据交互方案">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                  
+  <span id="/2019/08/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/" style="width: 100%;height:3.3em;display:flex;color:#858585;font-size:12px;" class="leancloud_visitors" data-flag-title="代码提交规范">
+    <span class="post-meta-item-text">访问量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'H6c7eYs09whlPN5D8K8SJSuH-gzGzoHsz',
+        appKey: 'QYdh14ieOz86zRUVIkOY7xd7',
+        notify: 'false',
+        verify: '',
+        avatar: 'mm',
+        placeholder: '说点什么吧...',
+        visitor: 'true'
+    });
+  </script>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <div id="sitetime"></div>
+  <span class="copyrights">
+    &copy; 2019 小明同学. All Rights Reserved
+  </span>
+</footer>
+<script language=javascript>
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    
+
+    var t1 = Date.UTC(2019,05,25,15,00,00); 
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML="本站已运行"+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  } 
+  siteTime();
+</script>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://kxming.github.io/kxming/2019/08/%E4%B8%87%E5%AD%97%E9%95%BF%E6%96%87%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90graphql%E6%90%BA%E7%A8%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%96%B9%E6%A1%88/" data-tooltip="万字长文全面解析GraphQL，携程微服务背景下的前后端数据交互方案">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/4a28a182a71cca1a6fae41b289aaba21?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">小明同学</h4>
+    
+      <div id="about-card-bio">前端开发</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Front-end
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        深圳
+      </div>
+    
+  </div>
+</div>
+
+    <div id="algolia-search-modal" class="modal-container">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="close-button"><i class="fa fa-close"></i></span>
+      <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+        <span class="searchby-algolia-text text-color-light text-small">by</span>
+        <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+      </a>
+      <i class="search-icon fa fa-search"></i>
+      <form id="algolia-search-form">
+        <input type="text" id="algolia-search-input" name="search"
+          class="form-control input--large search-input" placeholder="搜索" />
+      </form>
+    </div>
+    <div class="modal-body">
+      <div class="no-result text-color-light text-center"></div>
+      <div class="results">
+        
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/08/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83/">
+                <h3 class="media-heading">代码提交规范</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/08/%E4%B8%87%E5%AD%97%E9%95%BF%E6%96%87%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90graphql%E6%90%BA%E7%A8%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8B%E7%9A%84%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E6%96%B9%E6%A1%88/">
+                <h3 class="media-heading">万字长文全面解析GraphQL，携程微服务背景下的前后端数据交互方案</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Aug 8, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/angular%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/">
+                <h3 class="media-heading">Angular生命周期完全指南</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>原文链接： <a href="https://www.cuelogic.com/blog/angular-lifecycle">www.cuelogic.com</a></p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/library/">
+                <h3 class="media-heading">Library</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Angular Library</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Form使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x表单。Angular表单是一个可选的服务，在它自己的<code>@angular/forms</code>包中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/animate%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Animate使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x动画模块。Angular动画是一个可选的服务，在它自己的<code>@angular/animations</code>包 和 <code>@angular/platform-browser</code>中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/06/router%E4%BD%BF%E7%94%A8/">
+                <h3 class="media-heading">Router使用</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  Jun 6, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>本教程将讲解如何在angular8.x使用路由服务在页面之间导航。Angular路由器是一个可选的服务，在它自己的<code>@angular/router</code>包中。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/nrwl/">
+                <h3 class="media-heading">Nrwl</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Nrwl是angular-cli的超集，扩展了angular-cli原理图与构建器，可以实现monorepo风格的开发。你可以在工作区中同时使用angular与react构建使用不同框架的前端应用程序，同时可以包含nodejs后台应用程序实现在同一存储库中开发全栈应用。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/storybook/">
+                <h3 class="media-heading">Storybook</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Storybook是一个UI组件开发环境，它允许你浏览组件库，查看每个组件的不同状态，以及交互式开发和测试组件。Storybook运行在主应用程序之外，因此用户可以独立开发UI组件，而无需担心应用程序的特定依赖关系和需求。并且提供了灵活的API以及各种插件，还可以在http服务构建构建静态网站。</p>
+
+<p>Storybook支持Angular、React、Vue、ReactNative等组件。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+          <div class="media">
+            
+            <div class="media-body">
+              <a class="link-unstyled" href="https://kxming.github.io/kxming/2019/05/compodoc/">
+                <h3 class="media-heading">Compodoc</h3>
+              </a>
+              <span class="media-meta">
+                <span class="media-date text-small">
+                  May 5, 2019
+                </span>
+              </span>
+              <div class="media-content hide-xs font-merryweather"><p>Compodoc是Angular应用程序的一个文档生成工具。它生成应用程序的静态文档。可用于Angular、Nestjs、Stencil框架，包含8中内置主题，4种语言选项。</p></div>
+            </div>
+            <div style="clear:both;"></div>
+            <hr>
+          </div>
+        
+      </div>
+    </div>
+    <div class="modal-footer">
+      <p class="results-count text-medium"
+         data-message-zero=""
+         data-message-one=""
+         data-message-other="">
+         12 posts found
+      </p>
+    </div>
+  </div>
+</div>
+    
+  
+    
+    <div id="cover" style="background-image:url('https://kxming.github.io/kxming/images/cover.jpg');"></div>
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://kxming.github.io/kxming/js/script-qi9wbxp2ya2j6p7wx1i6tgavftewndznf4v0hy2gvivk1rxgc3lm7njqb6bz.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/kxming.github.io\/kxming\/2019\/08\/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83\/';
+          
+            this.page.identifier = '\/2019\/08\/%E4%BB%A3%E7%A0%81%E6%8F%90%E4%BA%A4%E8%A7%84%E8%8C%83\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'valine';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
