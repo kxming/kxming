@@ -27,25 +27,25 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/commit/</loc>
-    <lastmod>2019-08-13T19:48:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kxming.github.io/kxming/tags/commit/</loc>
     <lastmod>2019-08-13T19:48:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/git/</loc>
+    <loc>https://kxming.github.io/kxming/categories/commit/</loc>
     <lastmod>2019-08-13T19:48:32+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kxming.github.io/kxming/tags/git/</loc>
+    <lastmod>2019-08-13T19:48:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/git/</loc>
     <lastmod>2019-08-13T19:48:32+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -102,20 +102,14 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/translate/</loc>
-    <lastmod>2019-06-16T22:01:09+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kxming.github.io/kxming/tags/translate/</loc>
     <lastmod>2019-06-16T22:01:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/angular/</loc>
-    <lastmod>2019-06-11T19:22:16+08:00</lastmod>
+    <loc>https://kxming.github.io/kxming/categories/translate/</loc>
+    <lastmod>2019-06-16T22:01:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -125,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/library/</loc>
+    <loc>https://kxming.github.io/kxming/categories/angular/</loc>
     <lastmod>2019-06-11T19:22:16+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -137,18 +131,24 @@
   </url>
   
   <url>
+    <loc>https://kxming.github.io/kxming/categories/library/</loc>
+    <lastmod>2019-06-11T19:22:16+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://kxming.github.io/kxming/2019/06/form%E4%BD%BF%E7%94%A8/</loc>
     <lastmod>2019-06-08T22:02:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/form/</loc>
+    <loc>https://kxming.github.io/kxming/tags/form/</loc>
     <lastmod>2019-06-08T22:02:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/tags/form/</loc>
+    <loc>https://kxming.github.io/kxming/categories/form/</loc>
     <lastmod>2019-06-08T22:02:09+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -159,13 +159,13 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/animate/</loc>
+    <loc>https://kxming.github.io/kxming/tags/animate/</loc>
     <lastmod>2019-06-08T20:23:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/tags/animate/</loc>
+    <loc>https://kxming.github.io/kxming/categories/animate/</loc>
     <lastmod>2019-06-08T20:23:29+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -176,20 +176,14 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/ng-router/</loc>
-    <lastmod>2019-06-08T14:56:31+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://kxming.github.io/kxming/tags/ng-router/</loc>
     <lastmod>2019-06-08T14:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/nrwl/</loc>
-    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
+    <loc>https://kxming.github.io/kxming/categories/ng-router/</loc>
+    <lastmod>2019-06-08T14:56:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -200,14 +194,14 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/2019/05/nrwl/</loc>
+    <loc>https://kxming.github.io/kxming/categories/nrwl/</loc>
     <lastmod>2019-05-30T19:10:12+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/tool/</loc>
+    <loc>https://kxming.github.io/kxming/2019/05/nrwl/</loc>
     <lastmod>2019-05-30T19:10:12+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -217,13 +211,19 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/storybook/</loc>
-    <lastmod>2019-05-30T19:07:49+08:00</lastmod>
+    <loc>https://kxming.github.io/kxming/categories/tool/</loc>
+    <lastmod>2019-05-30T19:10:12+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://kxming.github.io/kxming/tags/storybook/</loc>
+    <lastmod>2019-05-30T19:07:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kxming.github.io/kxming/categories/storybook/</loc>
     <lastmod>2019-05-30T19:07:49+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -256,13 +256,13 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/blog/</loc>
+    <loc>https://kxming.github.io/kxming/tags/blog/</loc>
     <lastmod>2019-05-26T17:44:53+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/tags/blog/</loc>
+    <loc>https://kxming.github.io/kxming/categories/blog/</loc>
     <lastmod>2019-05-26T17:44:53+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -273,13 +273,13 @@
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/categories/component/</loc>
+    <loc>https://kxming.github.io/kxming/tags/component/</loc>
     <lastmod>2019-05-26T13:28:37+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://kxming.github.io/kxming/tags/component/</loc>
+    <loc>https://kxming.github.io/kxming/categories/component/</loc>
     <lastmod>2019-05-26T13:28:37+08:00</lastmod>
     <priority>0</priority>
   </url>

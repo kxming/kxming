@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Angular on KXMing</title>
+    <title>angular on KXMing</title>
     <link>https://kxming.github.io/kxming/categories/angular/</link>
-    <description>Recent content in Angular on KXMing</description>
+    <description>Recent content in angular on KXMing</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 11 Jun 2019 19:22:16 +0800</lastBuildDate>
